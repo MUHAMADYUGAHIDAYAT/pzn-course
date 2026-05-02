@@ -1,0 +1,234 @@
+p .ayam {
+    color:aqua ;
+
+}
+
+#luffy {
+    width: 100px;
+    height: 100px;
+    
+}
+
+#pic1 {
+    width: 250px;
+    height: 250px;
+}
+
+#menu {
+    background-color: brown;
+}
+#menu #menuul {
+    color: azure;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#content {
+    background-color: blue;
+}
+#content #jh-div {
+    color: bisque;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#content #isi-h1-div {
+    color: aquamarine;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* daftar */
+#daftar {
+    background-color: yellow;
+    padding: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+#uldaftar {
+    background-color: rgb(255, 246, 143);
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+
+
+}
+
+/* list daftar */
+#d-emoji {
+    background-color: rgb(255, 235, 0);
+}
+#d-emoji a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-bookmark {
+    background-color: rgb(255, 225, 0);
+}
+#d-bookmark a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-image {
+    background-color: rgb(255, 215, 0);
+}
+#d-image a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-menu {
+    background-color: rgb(255, 205, 0);
+}
+#d-menu a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-picture {
+    background-color: rgb(255, 195, 0);
+}
+#d-picture a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-pre {
+    background-color: rgb(255, 185, 0);
+}
+#d-pre a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-favicon {
+    background-color: rgb(255, 175, 0);
+}
+#d-favicon a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-div {
+    background-color: rgb(255, 165, 0);
+}
+#d-div a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-span {
+    background-color: rgb(255, 155, 0);
+}
+#d-span a{
+
+    text-decoration: none;
+    color: inherit;
+}
+#d-video {
+    background-color: rgb(255, 145, 0);
+}
+#d-video a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-audio {
+    background-color: rgb(255, 135, 0);
+}
+#d-audio a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-html5 {
+    background-color: rgb(255, 125, 0);
+}
+#d-html5 a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-iframe {
+    background-color: rgb(255, 115, 0);
+}
+#d-iframe a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-table {
+    background-color: rgb(255, 105, 0);
+}
+#d-table a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-semantic {
+    background-color: rgb(255, 95, 0);
+}
+#d-semantic a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-respon {
+    background-color: rgb(255, 85, 0);
+}
+#d-respon a{
+    text-decoration: none;
+    color: inherit;
+}
+#d-id {
+    background-color: rgb(255, 75, 0);
+}
+#d-id a{
+    text-decoration: none;
+    color: inherit;
+}
+/* semantic.html */
+#s-head {
+    background-color: gray;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+article {
+    padding: 20px;
+    width: 100%;
+    background-color: aliceblue;
+}
+#s-foot {
+    background-color: grey;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+#s-nav {
+    background-color: rgb(250, 206, 86);
+    padding: 10px;
+}
+#malas {
+    list-style-type: none;
+    overflow: hidden;
+}
+.malas2 {
+    float: left;
+}
+.malas2 a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.malas2 a:hover {
+    background-color: orange;
+}
+
+/* responsive html */
+#res-pic {
+    width: 100%;
+    height: auto;
+}
+#res-h1 {
+    font-size: 4vw;
+}
+#res-p {
+    font-size: 2vw;
+}
+
+/* id html */
+#id-h1 {
+    color: blue;
+}
+#id-p {
+    color: red;
+}

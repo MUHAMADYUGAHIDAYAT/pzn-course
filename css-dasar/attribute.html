@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <pre>/* CSS [attribute] selector */</pre>
+    <a class="att-c-a1" href="" target="_blank">Contoh 1</a>
+    <a class="att-c-a1" href="">Contoh 1</a>
+    <a class="att-c-a1" href="" target="_blank">Contoh 1</a>
+    <a class="att-c-a1" href="">Contoh 1</a>
+    <hr> 
+    <pre>/* CSS [attribue="value"]Selector */</pre>
+    <a class="att-c-a2" href="">Contoh 2</a>
+    <a class="att-c-a2" href="" target="_blank">Contoh 2</a>
+    <a class="att-c-a2" href="">Contoh 2</a>
+    <a class="att-c-a2" href="" target="_blank">Contoh 2</a>
+    <hr>
+    <pre>/* CSS [attribute~="value"] Selector */</pre>
+    <p class="att-c-a3" title="belajar pemograman">Contoh 3</p>
+    <p class="att-c-a3" title="belajarpemograman">Contoh 3</p>
+    <hr>
+    <pre>/* CSS [attribute|="value"] Selector */</pre>
+    <p class="att-c-a4" title="ngoding">Contoh 4</p>
+    <p class="att-c-a4" title="ngoding-ah">Contoh 4</p>
+    <p class="att-c-a4" title="ngoding ah">Contoh 4</p>
+    <p class="att-c-a4" title="ngodingah">Contoh 4</p>
+    <hr>
+    <pre>/* CSS [attribute^="value"] Selector */</pre>
+    <p class="att-c-a5" title="ngoding">Contoh 5</p>
+    <p class="att-c-a5" title="ngoding-ah">Contoh 5</p>
+    <p class="att-c-a5" title="ngoding ah">Contoh 5</p>
+    <p class="att-c-a5" title="ngodingah">Contoh 5</p>
+    <p class="att-c-a5" title="ah ngoding">Contoh 5</p>
+    <p class="att-c-a5" title="ah-ngoding">Contoh 5</p>
+    <p class="att-c-a5" title="ahngoding">Contoh 5</p>
+    <hr>
+    <pre>/* CSS [attribute$="value"] Selector */</pre>
+    <p class="att-c-a6" title="ngoding">Contoh 6</p>
+    <p class="att-c-a6" title="ngoding-ah">Contoh 6</p>
+    <p class="att-c-a6" title="ngoding ah">Contoh 6</p>
+    <p class="att-c-a6" title="ngodingah">Contoh 6</p>
+    <p class="att-c-a6" title="ah ngoding">Contoh 6</p>
+    <p class="att-c-a6" title="ah-ngoding">Contoh 6</p>
+    <p class="att-c-a6" title="ahngoding">Contoh 6</p>
+    <hr>
+    <pre>/* CSS [attribute*="value"] Selector */</pre>
+    <p class="att-c-a7" title="ngoding">Contoh 6</p>
+    <p class="att-c-a7" title="ngoding-ah">Contoh 6</p>
+    <p class="att-c-a7" title="ngoding ah">Contoh 6</p>
+    <p class="att-c-a7" title="ngodingah">Contoh 6</p>
+    <p class="att-c-a7" title="ah ngoding">Contoh 6</p>
+    <p class="att-c-a7" title="ah-ngoding">Contoh 6</p>
+    <p class="att-c-a7" title="ahngoding">Contoh 6</p>
+    <hr>
+    <p>Attribute Selector tanpa tag</p>
+    <style>
+        [title="belajar"] {
+            color: red;
+        }
+    </style>
+    <p title="belajar">belajar</p>
+    <p title="belajar ngoding">belajar</p>
+    <p title="belajar-ngoding">belajar</p>
+    <p title="ngoding belajar">belajar</p>
+    <p title="ngoding-belajar">belajar</p>
+    <p title="ngodingbelajar">belajar</p>
+<hr>
+
+    <style>
+        [title*="main"] {
+            color: red;
+        }
+    </style>
+    <p title="main">main</p>
+    <p title="main lah">main</p>
+    <p title="main-lah">main</p>
+    <p title="lah main">main</p>
+    <p title="lah-main">main</p>
+    <p title="lahmain">main</p>
+    <span title="main">mains</span>
+</body>
+</html>

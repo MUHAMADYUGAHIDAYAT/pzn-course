@@ -1,0 +1,316 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Latihan 3: Hitung Total Diskon Belanja</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .judul {
+            text-align: center;
+            background-color: #fcff31;
+            padding: 20px;
+            color: rgb(2, 2, 2);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .produk {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .produk-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            transition: ease 0.3s;
+            border: 4px solid #d1d1d1;
+        }
+
+        .produk-item:hover {
+            transform: scale(1.1)translateY(-5px);
+        }
+
+        .produk-item img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .produk-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .produk-item p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .produk-item span {
+            font-weight: bold;
+            color: #959700;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .produk-item input {
+            width: 80px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .simpan {
+            display: flex;
+            gap: 30px;
+        }
+        .hitung {
+            background-color: green;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            border: 0;
+            transition: ease 0.3s;
+            width: 100px;
+            font-weight: bold;
+            font-size: large;
+        }
+        .hitung:hover {
+            background-color: rgb(66, 255, 98);
+            color: rgb(0, 97, 0);
+            transform: scale(1.2)translateY(-5px);
+        }
+
+        .batal {
+            background-color: rgb(155, 0, 0);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            border: 0;
+            transition: ease 0.3s;
+            width: 100px;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .batal:hover {
+            background-color: rgb(255, 61, 61);
+            color: rgb(59, 0, 0);
+            transform: scale(1.2)translateY(-5px);
+        }
+
+        .hasil {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .hasil h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .bayar {
+            background-color: green;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            border: 0;
+            transition: ease 0.3s;
+            width: 100px;
+            font-weight: bold;
+            font-size: large;
+        }
+        .bayar:hover {
+            background-color: rgb(66, 255, 98);
+            color: rgb(0, 97, 0);
+            transform: scale(1.2)translateY(-5px);
+        }
+        .lanjut {
+            background-color: rgb(0, 92, 128);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            border: 0;
+            transition: ease 0.3s;
+            width: 250px;
+            font-weight: bold;
+            font-size: large;
+        }
+        .lanjut:hover {
+            background-color: rgb(66, 255, 239);
+            color: rgb(0, 45, 97);
+            transform: scale(1.2)translateY(-5px);
+        } 
+        .lesu {
+            display: flex;
+            gap: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content judul">
+            <h2>Toko Bangunan Sejahtera</h2>
+        </div>
+
+        <div class="content produk">
+            <div class="produk-item">
+                <img src="https://img.freepik.com/premium-vector/cement-icon-vector-design-template-white-background_731715-2439.jpg" alt="Semen">
+                <h3>Semen </h3>
+                <p>50kg</p>
+                <span>Rp 75.000</span>
+                <label for="semen">Jumlah: </label>
+                <input type="number" min="0" value="0" id="semen" name="semen">
+            </div>
+
+            <div class="produk-item">
+                <img src="https://thumbs.dreamstime.com/b/simple-vector-icon-paint-bucket-logo-design-illustration-383352810.jpg" alt="Cat Tembok">
+                <h3>Cat Tembok </h3>
+                <p>5L</p>
+                <span>Rp 120.000</span>
+                <label for="cat">Jumlah: </label>
+                <input type="number" min="0" value="0" id="cat" name="cat">
+            </div>
+
+            <div class="produk-item">
+                <img src="https://img.freepik.com/premium-photo/nails-without-screws-used-with-woodworking_1008660-5118.jpg" alt="Paku 1kg">
+                <h3>Paku</h3>
+                <p>1 pack (40 pcs)</p>
+                <span>Rp 25.000</span>
+                <label for="paku">Jumlah: </label>
+                <input type="number" min="0" value="0" id="paku" name="paku">
+            </div>
+
+            
+            <div class="produk-item">
+                <img src="https://media.istockphoto.com/id/1051157150/id/vektor/ikon-batu-bata-ilustrasi-vektor.jpg?s=612x612&w=0&k=20&c=e4J2z0PnLXYYosCCQLoNQRgcZsuoTfPqHI3c6DIkvbE=" alt="Batu Bata">
+                <h3>Batu Bata</h3>
+                <p>1 pcs</p>
+                <span>Rp 2.000</span>
+                <label for="batubata">Jumlah: </label>
+                <input type="number" min="0" value="0" id="batubata" name="batubata">
+            </div>
+
+            <div class="produk-item">
+                <img src="https://img.freepik.com/premium-vector/soy-food-icon-outline-vector-agave-vegan-eating-seed-color-flat_96318-139551.jpg" alt="pasir">
+                <h3>Pasir</h3>
+                <p>1kg</p>
+                <span>Rp 20.000</span>
+                <label for="pasir">Jumlah: </label>
+                <input type="number" min="0" value="0" id="pasir" name="pasir">
+            </div>
+        </div>
+
+        <div class="content simpan">
+            <button type="submit" id="hitung" class="hitung">Hitung</button>
+            <button type="submit" id="batal" class="batal">Batal</button>
+        </div>
+
+        
+        <div class="content hasil" id="hasil"></div>
+        <div class="lesu" id="lesu"></div>
+    </div>
+    <script>
+        document.getElementById("hitung").addEventListener("click", function(){
+            let semen = Number(document.getElementById("semen").value);
+            let cat = Number(document.getElementById("cat").value);
+            let paku = Number(document.getElementById("paku").value);
+            let batubata = Number(document.getElementById("batubata").value);
+            let pasir = Number(document.getElementById("pasir").value);
+
+            if (semen === 0 && cat === 0 && paku === 0 && batubata === 0 && pasir === 0 ){
+                alert("Harap untuk menginput quantity produk terlebih dahulu");
+                return;
+            }
+
+            let totalSemen = semen * 75000;
+            let totalCat = cat * 120000;
+            let totalPaku = paku * 25000;
+            let totalBatubata = batubata * 2000;
+            let totalPasir = pasir * 20000;
+
+            let totalHarga = totalSemen + totalCat + totalPaku + totalBatubata + totalPasir;
+
+            let totalDiskon = 0;
+            if (totalHarga >= 500000){
+                totalDiskon = totalHarga * 0.2;
+                persenDiskon = "20%"
+            } else if (totalHarga >= 250000){
+                totalDiskon = totalHarga * 0.1;
+                persenDiskon = "10%"
+            } else if (totalHarga >= 100000){
+                totalDiskon = totalHarga * 0.05;
+                persenDiskon = "5%"
+            }
+
+            let hargaDiskon = totalHarga - totalDiskon;
+
+            const dataBelanja = {
+                "Semen" : { q: semen, harga: totalSemen},
+                "Cat Tembok" : { q: cat, harga: totalCat},
+                "Paku" : { q: paku, harga: totalPaku},
+                "Batu Bata" : { q: batubata, harga: totalBatubata},
+                "Pasir" : { q: pasir, harga: totalPasir},
+            };
+            let hasil = document.getElementById("hasil");
+            hasil.innerHTML = "";
+
+            for (const data in dataBelanja){
+                if (dataBelanja[data].q > 0){
+                    hasil.innerHTML += `<p>${data} : (${dataBelanja[data].q}x) Rp. ${dataBelanja[data].harga.toLocaleString("id-ID")}<p>`;
+                }
+            }
+            
+            if (totalDiskon > 0){
+                hasil.innerHTML +=`<p>Total Diskon : Rp ${totalDiskon.toLocaleString("id-ID")}</p>`;
+                hasil.innerHTML +=`<p>Total : Rp ${hargaDiskon.toLocaleString("id-ID")} (-${persenDiskon})</p>`;
+            } else {
+                hasil.innerHTML +=`<p>Total : Rp ${totalHarga.toLocaleString("id-ID")}</p>`;
+            };
+            let lesu = document.getElementById("lesu");
+            lesu.innerHTML = "";
+            lesu.innerHTML +=`<button type="submit" class="bayar" id="bayar">Bayar</button>`;
+            lesu.innerHTML +=`<button type="submit" class="lanjut" id="lanjut">Masih ingin belanja?</button>`;
+
+            let bayar = document.getElementById("bayar").addEventListener("click", function(){
+                confirm("Yakin");
+            })
+        });
+
+        document.getElementById("batal").addEventListener("click", function () {
+            location.reload();
+        });
+
+    </script>
+</body>
+</html>
+
+
+
+

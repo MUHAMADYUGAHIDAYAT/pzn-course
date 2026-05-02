@@ -1,0 +1,51 @@
+.idx-body {
+    margin: 0;
+}
+.idx-container {
+    position: relative;
+}
+
+.idx-container h1 {
+    text-align: center;
+    background-color: rgb(0, 140, 255);
+    border: solid rgb(127, 168, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(224, 224, 255);
+    margin: 0;
+    padding: 15px;
+
+}
+
+.idx-content {
+    text-align: center;
+    opacity: 0;
+    transition: ease-in 0.3s;
+}
+
+.idx-container h1:hover + .idx-content {
+    opacity: 1;
+}
+
+.idx-content:hover {
+    opacity: 1;
+}
+
+.idx-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.idx-content ul li {
+    list-style-type: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(127, 168, 255);
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.idx-a {
+    text-decoration: none;
+    color: inherit;
+    transition: ease-in 0.3s;
+}

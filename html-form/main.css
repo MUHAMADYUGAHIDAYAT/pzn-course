@@ -1,0 +1,117 @@
+/* index html */
+#i-h1 {
+    text-align: center;
+    background-color: rgb(0, 102, 255);
+    padding: 30px;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+}
+
+#i-ul-daftar {
+    background-color: rgb(162, 232, 241);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+
+/* index html list */
+.idx-li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1vw;
+}
+
+#d-form {
+    background-color: rgb(0, 230, 255);
+}
+#d-input {
+    background-color: rgb(0, 220, 255);
+}
+#d-text {
+    background-color: rgb(0, 210, 255);
+}
+#d-label {
+    background-color: rgb(0, 200, 255);
+}
+#d-submit {
+    background-color: rgb(0, 190, 255);
+}
+#d-proses {
+    background-color: rgb(0, 180, 255);
+}
+#d-reset {
+    background-color: rgb(0, 170, 255);
+}
+#d-button {
+    background-color: rgb(0, 160, 255);
+}
+#d-check {
+    background-color: rgb(0, 150, 255);
+}
+#d-color-i {
+    background-color: rgb(0, 140, 255);
+}
+#d-date {
+    background-color: rgb(0, 130, 255);
+}
+#d-d-time {
+    background-color: rgb(0, 120, 255);
+}
+#d-month {
+    background-color: rgb(0, 110, 255);
+}
+#d-time {
+    background-color: rgb(0, 100, 255);
+}
+#d-week {
+    background-color: rgb(0, 90, 255);
+}
+#d-email {
+    background-color: rgb(0, 80, 255);
+}
+#d-file {
+    background-color: rgb(0, 70, 255);
+}
+#d-hidden {
+    background-color: rgb(0, 60, 255);
+}
+#d-i-image {
+    background-color: rgb(0, 50, 255);
+}
+#d-i-number {
+    background-color: rgb(0, 40, 255);
+}
+#d-i-password {
+    background-color: rgb(0,30, 255);
+}
+#d-i-radio {
+    background-color: rgb(0,40, 255);
+}
+#d-i-range {
+    background-color: rgb(0,30, 255);
+}
+#d-i-telpon {
+    background-color: rgb(0,20, 255);
+}
+#d-i-url {
+    background-color: rgb(0,10, 255);
+}
+#d-text-a {
+    background-color: rgb(0,0, 255);
+}
+#d-button-t {
+    background-color: rgb(10,0, 255);
+}
+#d-select-t {
+    background-color: rgb(20,0, 255);
+}
+#d-option-g {
+    background-color: rgb(30,0, 255);
+}
+#d-data-l {
+    background-color: rgb(40,0, 255);
+}
+#d-f-set {
+    background-color: rgb(50,0, 255);
+}

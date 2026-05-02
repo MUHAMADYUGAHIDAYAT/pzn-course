@@ -1,0 +1,640 @@
+/* index html */
+#idx-div-ul {
+    background-color: rgb(1, 122, 1);
+    padding: 20px;
+    text-align: center;
+    color: rgb(20, 20, 20);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1vw;
+
+}
+#idx-ul {
+    background-color: rgb(180, 250, 180);
+    list-style-type: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1vw;
+    padding: 20px;
+}
+.idx-li a{ 
+    text-decoration: none;
+    color: inherit;
+}
+#d-external {
+    background-color: rgb(150, 255, 150);
+}
+#d-internal {
+    background-color: rgb(140, 255, 140);
+}
+#d-inline {
+    background-color: rgb(130, 255, 130);
+}
+#d-id {
+    background-color: rgb(120, 255, 120);
+}
+#d-class {
+    background-color: rgb(110, 255, 110);
+}
+#d-select-l {
+    background-color: rgb(100, 255, 100);
+}
+#d-combinator {
+    background-color: rgb(90, 255, 90);
+}
+#d-attribute {
+    background-color: rgb(80, 255, 80);
+}
+#d-color {
+    background-color: rgb(70, 255, 70);
+}
+#d-text {
+    background-color: rgb(60, 255, 60);
+}
+#d-font {
+    background-color: rgb(50, 255, 50);
+}
+#d-bg {
+    background-color: rgb(40, 255, 40);
+}
+#d-box-mdl {
+    background-color: rgb(30, 255, 30);
+}
+#d-max {
+    background-color: rgb(20, 255, 20);
+}
+#d-border {
+    background-color: rgb(10, 255, 10);
+}
+#d-outline {
+    background-color: rgb(0, 255, 0);
+}
+#d-bg-img {
+    background-color: rgb(0, 250, 0);
+}
+#d-opacity {
+    background-color: rgb(0, 240, 0);
+}
+#d-wrt-mdl {
+    background-color: rgb(0, 230, 0);
+}
+#d-overflow {
+    background-color: rgb(0, 220, 0);
+}
+#d-link {
+    background-color: rgb(0, 210, 0);
+}
+#d-list {
+    background-color: rgb(0, 200, 0);
+}
+#d-table {
+    background-color: rgb(0, 190, 0);
+}
+#d-form {
+    background-color: rgb(0, 180, 0);
+}
+#d-content {
+    background-color: rgb(0, 170, 0);
+}
+#d-counter {
+    background-color: rgb(0, 160, 0);
+}
+#d-filter {
+    background-color: rgb(0, 150, 0);
+}
+#d-import {
+    background-color: rgb(0, 140, 0);
+}
+#d-cascade {
+    background-color: rgb(0, 130, 0);
+}
+#d-layer {
+    background-color: rgb(0, 120, 0);
+}
+
+/* external html */
+#ext-h1 {
+    color: red;
+    font-size: 20px;
+}
+#ext-h2 {
+    color: blue;
+    font-size: 15px;
+}
+
+
+/* id html */
+#id-h1 {
+    color: red;
+}
+#id-p {
+    color: green;
+}
+
+
+/* class html */
+.class-h1 {
+    color: blue;
+}
+.class-h2 {
+    color: yellow;
+}
+.class-upper {
+    text-transform: uppercase;
+}
+
+/* selector list Html */
+#select-l-h1, .select-l-h2, h3 {
+    color: red;
+}
+
+/* combinator html */
+
+/* descendand selector */
+#combinator-div1  p{
+    color: red;
+}
+/* child selector */
+#combinator-div2 > p{
+    color: blue;
+}
+/* adjacent sibling selector */
+#combinator-div3 + p{
+    color: green;
+}
+/* General Sibling Selector */
+#combinator-div4 ~ p{
+    color: purple;
+}
+
+/* attribute html  */
+
+/* CSS [attribute] selector */
+.att-c-a1[target] {
+    color: red;
+}
+/* CSS [attribue="value"]Selector */
+.att-c-a2[target="_blank"] {
+    color: blue;
+}
+/* CSS [attribute~="value"] Selector */
+.att-c-a3[title~="belajar"] {
+    color: green;
+}
+/* CSS [attribute|="value"] Selector */
+.att-c-a4[title|="ngoding"] {
+    color: aqua;
+}
+/* CSS [attribute^="value"] Selector */
+.att-c-a5[title^="ngoding"] {
+    color: purple;
+}
+/* CSS [attribute$="value"] Selector */
+.att-c-a6[title$="ngoding"] {
+    color: yellow;
+}
+/* CSS [attribute*="value"] Selector */
+.att-c-a7[title*="ngoding"] {
+    color: orange;
+}
+
+/* color html  */
+#color-h1 {
+    color: pink;
+}
+#color-h2 {
+    color: green;
+}
+#color-p {
+    color: blue;
+}
+
+/* text html  */
+.t-ta-p {
+    text-align: center;
+}
+.t-td-p {
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 5px;
+    text-decoration-style: wavy;
+}
+.t-tt-p {
+    text-transform: capitalize;
+}
+.t-tspc-p {
+    text-indent: 30px;
+    letter-spacing: 4px;
+    line-height: 30px;
+    word-spacing: 30px;
+    /* white-space: nowrap; */
+}
+.t-tshdw-p {
+    text-shadow: 4px 4px 4px green;
+}
+
+/* Font Html */
+#f-h1 {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 500%;
+}
+#f-p {
+    font-family: "Bitcount Prop Double", system-ui;
+    font-style: oblique ;
+}
+
+/* backgound html */
+#bg-p{
+    background-color: pink;
+}
+#bg-body {
+    background-color: aqua;
+}
+
+/* Box Model Html */
+#bm-body {
+    padding: 0px;
+    margin: 0px;
+}
+#bm-div1 {
+    background-color: pink;
+    height: 150px;
+    width: 500px;
+    margin: 10px 20px 50px 0px;
+    padding: 10px 20px 30px 70px;
+}
+#bm-p1 {
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+#bm-div2 {
+    background-color: aqua;
+    height: 130px;
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+}
+#bm-p2{
+    padding: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* max html  */
+#max-div1 {
+    background-color: orange;
+    width: 75%;
+    min-width: 200px;
+    max-width: 750px;
+}
+
+/* border html */
+#bg-p{
+    background-color: pink;
+}
+#bg-body {
+    background-color: aqua;
+}
+
+/* Box Model Html */
+#border-body {
+    padding: 0px;
+    margin: 0px;
+}
+#border-div1 {
+    background-color: pink;
+    height: 150px;
+    width: 500px;
+    margin: 10px 20px 50px 0px;
+    padding: 10px 20px 30px 70px;
+    border-width: 5px;
+    border-right-style: groove;
+    border-top-style: groove;
+    border-radius: 20px;
+}
+#border-p1 {
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+#border-div2 {
+    background-color: aqua;
+    height: 130px;
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 20px 0px;
+}
+#border-p2{
+    padding: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* Outline Html  */
+#otln-body {
+    padding: 0px;
+    margin: 0px;
+}
+#otln-div1 {
+    background-color: pink;
+    height: 150px;
+    width: 500px;
+    margin: 10px 20px 50px 0px;
+    padding: 10px 20px 30px 70px;
+    /* border-style: solid; */
+    /* border-width: 10px; */
+    outline-style: solid;
+    outline-width: 30px;
+    outline-color: burlywood;
+    border-radius: 20px 0px;
+}
+#otln-p1 {
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+#otln-div2 {
+    background-color: aqua;
+    height: 130px;
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 20px 0px;
+}
+#otln-p2{
+    padding: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* Background image html */
+#bg-img-div1 {
+    background-image: url("https://cdn1-production-images-kly.akamaized.net/lSOkxv3ppCqJe0yuXWa3lm5Tnkg=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/67212/original/ikan-hias-130421b.jpg");
+    color: rgb(255, 1, 1);
+    padding: 0px;
+    border: 0px;
+    width: 100%;
+    height: 150px;
+    background-repeat: repeat-x;
+    background-size: 250px;
+}
+#bg-img-div2 {
+    background: linear-gradient(180deg,rgba(42, 123, 155, 1) 0%, rgba(15, 145, 113, 1) 29%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    color: rgb(255, 1, 1);
+    padding: 0px;
+    border: 0px;
+    width: 100%;
+    height: 150px;
+    background-repeat: repeat-x;
+    background-size: 250px;
+}
+
+/* Opacity Html */
+#opct-body {
+    padding: 0px;
+    margin: 0px;
+}
+#opct-div1 {
+    background-color: pink;
+    height: 150px;
+    width: 500px;
+    margin: 10px 20px 50px 0px;
+    padding: 10px 20px 30px 70px;
+    opacity: 0.5;
+}
+#opct-p1 {
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+#opct-div2 {
+    background-color: aqua;
+    height: 130px;
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+}
+#opct-p2{
+    padding: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* Writing model html  */
+#wm-body {
+    padding: 0px;
+    margin: 0px;
+}
+#wm-div1 {
+    background-color: pink;
+    height: 150px;
+    width: 500px;
+    margin: 10px 20px 50px 0px;
+    padding: 10px 20px 30px 70px;
+    writing-mode: vertical-lr;
+}
+#wm-p1 {
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+#wm-div2 {
+    background-color: aqua;
+    height: 130px;
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+    writing-mode: vertical-rl;
+}
+#wm-p2{
+    padding: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* overflow html */
+#of-body {
+    padding: 0px;
+    margin: 0px;
+}
+#of-div1 {
+    background-color: pink;
+    height: 150px;
+    width: 500px;
+    margin: 10px 20px 50px 0px;
+    padding: 10px 20px 30px 70px;
+    overflow: auto;
+}
+#of-p1 {
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+#of-div2 {
+    background-color: aqua;
+    height: 130px;
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+}
+#of-p2{
+    padding: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* link html */
+#link-div1 {
+    margin: 0px;
+    text-align: center;
+    background-color: rgb(132, 0, 255);
+    border: 0px;
+}
+.link-a {
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px 0px;
+    border-color: blue;
+    color: blue;
+    padding: 5px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.link-a:visited {
+    color: black;
+}
+.link-a:hover {
+    color: red;
+    background-color: aquamarine;
+}
+#link-div2 {
+    background-color: rgb(132, 0, 255);
+    color: white;
+}
+
+/* List  Html */
+/* #list-ul1 {
+    
+} */
+#list-li1 {
+    list-style-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8DfHI7SQ8Gt7x22MeC0yihn-MCfa9rBIdOA&s");
+    list-style-position: outside;
+}
+
+/* Table Html  */
+#table-table1, .table-tr, .table-th, .table-td {
+    border-style: solid;
+    border-width: 2px;
+    border-collapse: collapse;
+}
+#table-table1 {
+    width: 200px;
+    height: 200px;
+}
+.table-th {
+    text-align: left;
+    background-color: blue;
+    color: antiquewhite;
+}
+.table-th:hover {
+    background-color: purple;
+}
+.table-td {
+    text-align: center;
+    background-color: orange;
+    color: yellow;
+}
+.table-td:hover {
+    background-color: red;
+    color: white;
+}
+
+/* form html */
+#form-input1 {
+    border-style: solid;
+    border-color: black;
+    padding: 5px;
+    border-radius: 10px 0px;
+    margin-bottom: 5px;
+}
+#form-input2 {
+    border-style: solid;
+    border-color: black;
+    padding: 5px;
+    border-radius: 10px 0px;
+    margin-bottom: 5px;
+}
+#form-input1:focus, #form-input2:focus {
+    background-color: black;
+}
+
+#form-input1:required, #form-input2:required {
+    color: red;
+}
+
+#form-btn1 {
+    border-style: solid;
+    border-color: black;
+    padding: 5px;
+    border-radius: 10px 0px;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#form-btn1:hover {
+    background-color: black;
+    color: white;
+}
+
+/* content html  */
+/* #content-p1 {
+    content: url("https://pict.sindonews.net/webp/480/pena/news/2024/08/02/700/1428049/4-fakta-menarik-galactus-villain-utama-dalam-film-mcu-the-fantastic-four-first-step-ehn.webp");
+} */
+#content-p1::before {
+    content: "Eko";
+}
+#content-p1::after {
+    content: "Eko";
+}
+
+/* counter html */
+/* #counter-body {
+    counter-set: counter-judul 0;
+    counter-set: counter-subjudul 0;
+} */
+.counter-h1 {
+    counter-increment: counter-judul 1;
+    counter-reset: counter-subjudul;
+    
+}
+.counter-h2 {
+    counter-increment: counter-subjudul 1;
+}
+
+.counter-h1::before {
+    content: counter(counter-judul)". ";
+}
+
+.counter-h2::before {
+    content: counter(counter-judul)"." counter(counter-subjudul)". ";
+}
+
+/* filter html  */
+#filter-img1 {
+    filter: blur(2px);
+}
+
+/* import html  */
+#import-h1-1 {
+    color: red;
+}
+#import-h2-1 {
+    color: blue;
+}
+

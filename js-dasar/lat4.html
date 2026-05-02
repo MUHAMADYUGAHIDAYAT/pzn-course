@@ -1,0 +1,255 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Latihan 4 :Sistem Toko Sederhana</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        margin: 0;
+        padding: 20px;
+}
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+    h1, h2 {
+        text-align: center;
+        color: #333;
+}
+    .input-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+}
+    .input-section label {
+        flex: 1 0 100px;
+        align-self: center;
+        color: #555;
+}
+    .input-section input {
+        flex: 2 0 150px;
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+}
+    #add-btn {
+        flex: 1 0 150px;
+        padding: 8px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+}
+    #add-btn:hover {
+        background-color: #0056b3;
+}
+    .cart-section {background: #eef1f7;
+        border-radius: 6px;
+        padding: 10px;
+        min-height: 100px;
+        margin-bottom: 20px;
+}
+
+    #cart-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+}
+    #cart-list li {
+        padding: 6px;
+        border-bottom: 1px solid #ccc;
+}
+    #total-price {
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: right;
+}
+    #checkout-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+    #checkout-btn:hover {
+        background-color: #1e7e34;
+}
+
+    .hidden {
+        display: none;
+}
+
+    #nota-section {
+        margin-top: 20px;
+        background: #fafafa;
+        padding: 15px;
+        border-radius: 6px;
+        white-space: pre-wrap;
+        font-family: Consolas, monospace;
+        border: 1px solid #ddd;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistem Toko Sederhana</h1>
+        <div class="input-section">
+            <label for="product-name">Nama Produk:</label>
+            <input type="text" id="product-name" name="product-name" placeholder="Masukkan nama produk" />
+
+            <label for="product-qty">Jumlah Beli:</label>
+            <input type="number" id="product-qty" name="product-qty" min="1" placeholder="0" />
+
+            <button id="add-btn">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="cart-section">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-list"></ul>
+        <div id="total-price">Total Harga: Rp0</div>
+
+        </div>
+            <button id="checkout-btn">Checkout</button>
+        <div id="nota-section" class="hidden">
+            <h2>Nota Pembelian</h2>
+            <pre id="nota-content"></pre>
+        </div>
+    </div>
+
+    <script>
+
+        const produks = [
+            { nama: "Pensil", harga: 2000, stok:12 },
+            { nama: "Buku", harga: 5000, stok:24 },
+            { nama: "Pena", harga: 3000, stok: 10 },
+            { nama: "Spidol", harga: 4500, stok: 8 },
+        ]
+
+        let keranjang =[];
+        console.log(keranjang);
+
+        const namaProduk = document.getElementById("product-name");
+        const jumlahProduk = document.getElementById("product-qty");
+        const tambahKeranjang = document.getElementById("add-btn");
+        const listKeranjang = document.getElementById("cart-list");
+        const totalHarga = document.getElementById("total-price");
+        const tombolCheckout = document.getElementById("checkout-btn");
+        const notaSection = document.getElementById("nota-section");
+        const notaContent = document.getElementById("nota-content");
+
+        tambahKeranjang.addEventListener("click", function (){
+            let nama = namaProduk.value;
+            let stok = Number(jumlahProduk.value);
+
+            if ( !nama || nama === null || nama === undefined || nama === ""){
+                alert("Nama Produk Invalid !");
+                return;
+            }
+
+            if ( stok === null || stok === isNaN || stok === 0 || nama === undefined){
+                alert("Stok Produk Invalid !");
+                return;
+            }
+
+            const produk = produks.find(function(p) {
+                return p.nama.toLowerCase() === nama.toLowerCase();
+            });
+
+            if (!produk) {
+                alert(`Produk ${nama} Tidak tersedia`)
+                return;
+            }
+
+            if (stok > produk.stok) {
+                alert(`Stok ${produk.nama} tidak cukup. Stok tersedia : ${produk.stok}`)
+                return;
+            }
+
+            const isiKeranjang = keranjang.find(function(isi){
+                return isi.nama.toLowerCase() === nama.toLowerCase();
+            })
+            console.log(keranjang);
+
+            if (isiKeranjang) {
+                if(isiKeranjang.jumlah + stok > produk.stok) {
+                    alert(`Total jumlah ${produk.nama} di keranjang melebihi stok.`);
+                    return;
+                }
+                isiKeranjang.jumlah += stok;
+            } else {
+                keranjang.push({ nama: produk.nama, harga: produk.harga, jumlah: stok})
+            }
+
+            munculahKeranjang();
+            namaProduk.value = "";
+            jumlahProduk.value = "";
+        });
+
+        function munculahKeranjang(){
+            listKeranjang.innerHTML = "";
+            let total = 0;
+            keranjang.forEach(function(isi) {
+                const subtotal = isi.harga * isi.jumlah;
+                total += subtotal;
+                const li = document.createElement("li");
+                li.textContent = `${isi.nama} - ${isi.jumlah} x Rp ${isi.harga} = Rp ${subtotal}`;
+                listKeranjang.appendChild(li);
+            });
+            totalHarga.textContent = `Total Harga: Rp ${total}`;
+        }
+
+        tombolCheckout.addEventListener("click", function(){
+            if(keranjang.length === 0) {
+                alert("Keranjang Kosong!");
+                return;
+            }
+
+            keranjang.forEach(function(isi){
+                const produk = produks.find(function(p){
+                    return p.nama.toLowerCase() === isi.nama.toLowerCase();
+                });
+                if (produk) {
+                    produk.stok -= isi.jumlah;
+                }
+            });
+        
+
+        let nota = "Nota Pembelian:\n\n";
+        let total = 0;
+        keranjang.forEach(function(isi){
+            let subtotal = isi.harga * isi.jumlah;
+            total += subtotal;
+            nota += `${isi.nama} - ${isi.jumlah.toLocaleString("id-ID")} x Rp ${isi.harga.toLocaleString("id-ID")} = ${subtotal.toLocaleString("id-ID")} \n`;
+        });
+
+        nota += `\nTotal Harga: Rp ${total.toLocaleString("id-ID")} \n`;
+        nota += (total > 500000) ? "Diskon 10% diberikan\n" : "Tidak ada diskon\n"
+        nota += "\nTerima kasih telah berbelanja!";
+
+        notaContent.textContent = nota;
+        notaSection.classList.remove("hidden");
+        console.log(keranjang);
+        keranjang = [];
+        munculahKeranjang();
+        console.log(keranjang);
+    });
+    
+    </script>
+</body>
+</html>

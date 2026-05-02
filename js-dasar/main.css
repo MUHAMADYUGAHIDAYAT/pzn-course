@@ -1,0 +1,239 @@
+.idx-body {
+    margin: 0;
+}
+.idx-container {
+    position: relative;
+
+}
+.idx-container h1 {
+    display: grid;
+    text-align: center;
+    background-color: red;
+    margin: 0;
+    padding: 20px;
+    border: 0;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.idx-content {
+    text-align: center;
+    opacity: 0;
+    transition: ease-in 0.3s;
+}
+.idx-content:hover {
+    opacity: 1;
+}
+.idx-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.idx-content ul li {
+    list-style-type: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(250, 92, 64);
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.idx-container h1:hover  + .idx-content {
+    opacity: 1;
+}
+
+.idx-a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.6s ease;
+}
+.idx-a:hover {
+    display: block;
+    background-color: rgb(102, 0, 0);
+    color: rgb(255, 187, 0);
+    padding: 10px;
+}
+
+#d-hello-w {
+    background-color: rgb(252, 150, 110);
+}
+#d-t-data-number {
+    background-color: rgb(255, 144, 100);
+}
+#d-t-data-boolean {
+    background-color: rgb(255, 137, 90);
+}
+#d-t-data-string {
+    background-color: rgb(255, 130, 80);
+}
+#d-var {
+    background-color: rgb(252, 121, 70);
+}
+#d-op-aritmatika {
+    background-color: rgb(255, 115, 60);
+}
+#d-op-aug-assgn {
+    background-color: rgb(252, 107, 50);
+}
+#d-op-unary {
+    background-color: rgb(255, 101, 40);
+}
+#d-op-perbandingan {
+    background-color: rgb(253, 93, 30);
+}
+#d-op-logika {
+    background-color: rgb(253, 86, 20);
+}
+#d-console {
+    background-color: rgb(252, 79, 10);
+}
+#d-s-template {
+    background-color: rgb(250, 71, 0);
+}
+#d-convert-str-num {
+    background-color: rgb(212, 60, 0);
+}
+#d-tipe-d-array {
+    background-color: rgb(173, 50, 1);
+}
+#d-tipe-d-object {
+    background-color: rgb(139, 40, 1);
+}
+#d-if-exp {
+    background-color: rgb(105, 30, 0);
+}
+#d-popup {
+    background-color: rgb(68, 20, 1);
+}
+#d-popup-prompt {
+    background-color: rgb(255, 0, 0);
+}
+#d-popup-confirm {
+    background-color: rgb(245, 0, 0);
+}
+#d-undifined {
+    background-color: rgb(235, 0, 0);
+}
+#d-null {
+    background-color: rgb(225, 0, 0);
+}
+#d-switch-s {
+    background-color: rgb(215, 0, 0);
+}
+#d-op-typeof {
+    background-color: rgb(205, 0, 0);
+}
+#d-op-in {
+    background-color: rgb(195, 0, 0);
+}
+#d-op-ternary {
+    background-color: rgb(185, 0, 0);
+}
+#d-op-nullish-c {
+    background-color: rgb(175, 0, 0);
+}
+#d-optional-chaining {
+    background-color: rgb(165, 0, 0);
+}
+#d-falsy-truthly {
+    background-color: rgb(155, 0, 0);
+}
+#d-op-logika-non-b {
+    background-color: rgb(145, 0, 0);
+}
+#d-for-loop {
+    background-color: rgb(135, 0, 0);
+}
+#d-while-loop {
+    background-color: rgb(125, 0, 0);
+}
+#d-do-while-loop {
+    background-color: rgb(115, 0, 0);
+}
+#d-break {
+    background-color: rgb(105, 0, 0);
+}
+#d-continue {
+    background-color: rgb(95, 0, 0);
+}
+#d-label {
+    background-color: rgb(85, 0, 0);
+}
+#d-for-in {
+    background-color: rgb(75, 0, 0);
+}
+#d-for-of {
+    background-color: rgb(65, 0, 0);
+}
+#d-with-statement {
+    background-color: rgb(55, 0, 0);
+}
+#d-function {
+    background-color: rgb(45, 0, 0);
+}
+#d-function {
+    background-color: rgb(45, 0, 0);
+}
+#d-function-parameter {
+    background-color: rgb(45, 0, 0);
+}
+#d-function-return-value {
+    background-color: rgb(35, 0, 0);
+}
+#d-optional-parameter {
+    background-color: rgb(35, 0, 0);
+}
+#d-funct-def-parameter {
+    background-color: rgb(35, 0, 0);
+}
+#d-rest-parameter { 
+    background-color: rgb(35, 0, 0);
+}
+#d-function-in-value {
+    background-color: rgb(35, 0, 0);
+}
+#d-func-anonymous {
+    background-color: rgb(35, 0, 0);
+}
+#d-func-in-func {
+    background-color: rgb(35, 0, 0);
+}
+#d-scope {
+    background-color: rgb(35, 0, 0);
+}
+#d-recr-funct {
+    background-color: rgb(35, 0, 0);
+}
+#d-func-gen {
+    background-color: rgb(35, 0, 0);
+}
+#d-arrow-funct {
+    background-color: rgb(35, 0, 0);
+}
+#d-closure {
+    background-color: rgb(35, 0, 0);
+}
+#d-object-method {
+    background-color: rgb(35, 0, 0);
+}
+#d-this {
+    background-color: rgb(35, 0, 0);
+}
+#d-arrow-funct-obj {
+    background-color: rgb(35, 0, 0);
+}
+#d-get-and-set {
+    background-color: rgb(35, 0, 0);
+}
+#d-var-problem {
+    background-color: rgb(35, 0, 0);
+}
+#d-destructuring {
+    background-color: rgb(35, 0, 0);
+}
+#d-strict-mode {
+    background-color: rgb(35, 0, 0);
+}
+#d-debug {
+    background-color: rgb(35, 0, 0);
+
+}

@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Export</title>
+</head>
+<body>
+    <script type="module">
+
+        import {company,Company,sum} from "./scripts/multiple.js";
+        import {company as perusahaan,Company as Perusahaan,sum as total} from "./scripts/multiple2.js";
+
+        console.log(company);
+        console.log(perusahaan);
+        
+        console.log(sum(1,2));
+        console.log(total(1,2));
+
+        const a = new Company();
+        const b = new Perusahaan();
+
+
+    </script>
+</body>
+</html>

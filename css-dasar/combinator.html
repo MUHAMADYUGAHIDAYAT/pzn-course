@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="combinator-div1">
+        <article>
+            <p>Ini di pilih karena di dalam div</p>
+        </article>
+        <p>ini juga di pilih karena di dalam div</p>
+    </div>
+    <p>ini gak di ajak</p>
+<hr>
+    <div id="combinator-div2">
+        <article>
+            <p>Ini tidak pilih</p>
+        </article>
+        <p>ini  di pilih karena turunan langsung dari div</p>
+    </div>
+    <p>ini gak di ajak</p>
+<hr>
+    <div id="combinator-div3">
+        <article>
+            <p>Ini tidak pilih</p>
+        </article>
+        <p>ini  tidak di pilih</p>
+    </div>
+    <p>ini di ajak karena saudara pertama div</p>
+    <p>ini ga di ajak</p>
+<hr>
+    <div id="combinator-div4">
+        <article>
+            <p>Ini tidak pilih</p>
+        </article>
+        <p>ini tidak di pilih</p>
+    </div>
+    <p>ini di ajak karena saudara div</p>
+    <p>ini di ajak karena saudara div</p>
+</body>
+</html>

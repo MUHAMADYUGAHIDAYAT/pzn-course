@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Latihan 2: Input Nilai Rata-rata Mahasiswa</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        } 
+        .content {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+        .judul {
+            text-align: center;
+            background-color: rgb(43, 43, 255);
+            color: rgb(201, 201, 255);
+        }
+        .judul h2 {
+            margin: 0;
+            padding: 15px;
+        }
+        .isi {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgb(0, 80, 252);
+        }
+        input {
+            width: 50px;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 3px;
+        }
+        .pemog2 {
+            display: grid;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            padding: 20px;
+            border: 5px solid rgb(54, 141, 255);
+            background-color: rgb(1, 136, 226);
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            color: white;
+        }
+        .basisdata{
+            display: grid;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            padding: 20px;
+            border: 5px solid rgb(0, 140, 255);
+            background-color: rgb(25, 163, 255);
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            color: white;
+        }
+        .rpl {
+            display: grid;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            padding: 20px;
+            border: 5px solid rgb(54, 141, 255);
+            background-color: rgb(1, 136, 226);
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            color: white;
+        }
+        .anvis {
+            display: grid;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            padding: 20px;
+            border: 5px solid rgb(0, 140, 255);
+            background-color: rgb(25, 163, 255);
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            color: white;
+        }
+        .save {
+            display: block;
+            background-color: rgb(47, 0, 255);
+            padding: 10px;
+            text-align: center;
+        }
+        .save button {
+            margin: 20px;
+        }
+        .hasil {
+            display: block;
+            background-color: rgb(43, 43, 255);
+            padding: 10px;
+            justify-content: center;
+            color: rgb(3, 11, 22);
+        }
+        .hasil p{
+            margin: 0px;
+            font-size: medium;
+            background-color: rgb(0, 80, 252);
+            color: rgb(201, 201, 255);
+        }
+        .lulus {
+            display: block;
+            padding: 10px;
+            background-color: green!important;
+            color: greenyellow!important;
+        }
+        .gagal {
+            display: block;
+            padding: 10px;
+            background-color: rgb(134, 0, 0)!important;
+            color: rgb(255, 115, 115)!important;
+        }
+        .malas {
+            display: block;
+            padding: 10px;
+            background-color: rgb(145, 0, 145)!important;
+            color: rgb(192, 125, 255)!important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="judul">
+                <h2>Input Nilai Rata-rata Mahasiswa</h2>
+            </div>
+            <div class="isi">
+                <div class="pemog2">
+                    <label for="pemog2">Pemogramman 2 </label>
+                    <input type="number" name="pemog2" id="pemog2" oninput="this.value = Math.min(this.value, 100)">
+                </div>
+                <div class="basisdata">
+                    <label for="basisdata">Basis Data </label>
+                    <input type="number" name="basisdata" id="basisdata" oninput="this.value = Math.min(this.value, 100)">
+                </div>
+                <div class="rpl">
+                    <label for="rpl">Rekayasa Software </label>
+                    <input type="number" name="rpl" id="rpl" oninput="this.value = Math.min(this.value, 100)">
+                </div>
+                <div class="anvis">
+                    <label for="anvis">Analisa Visual </label>
+                    <input type="number" name="anvis" id="anvis" oninput="this.value = Math.min(this.value, 100)">
+                </div>
+            </div>
+            <div class="save">
+                <button type="submit" id="hitung">Hitung</button>
+                <button type="submit" id="hapus">Hapus</button>
+            </div>
+            <div class="hasil" id="hasil"></div>
+        </div>
+    </div>
+    <script>
+
+        document.getElementById("hitung").addEventListener("click", function(){
+            let pemog2 = Number(document.getElementById("pemog2").value);
+            let basisdata = Number(document.getElementById("basisdata").value);
+            let rpl = Number(document.getElementById("rpl").value);
+            let anvis = Number(document.getElementById("anvis").value);
+
+            if (pemog2 == 0 || basisdata == 0 || rpl == 0 || anvis == 0) {
+            alert("Harap isi semua nilai terlebih dahulu!");
+            return;
+            };
+
+            totalNilai = pemog2 + basisdata + rpl + anvis;
+            console.log(totalNilai);
+            rataNilai = totalNilai / 4;
+            console.log(rataNilai);
+
+            let status = rataNilai;
+            if(status >= 75){
+                status = `<p class="lulus">Selamat Anda Lulus!</p>`;
+            } else if(status >= 0){
+                status = `<p class="gagal">Maaf Anda Tidak Lulus!</p>`;
+            } else {
+                status = `<p class="malas">Easter Egg</p>`;
+            };
+            console.log(status);
+
+            dataNilai = {
+                pemog2 : pemog2,
+                basisdata : basisdata,
+                rpl : rpl,
+                anvis : anvis,
+                totalNilai : totalNilai,
+                rataNilai : rataNilai,
+                status : status,
+            }
+            
+            for (const data in dataNilai) {
+                let hasil = document.getElementById("hasil");
+                hasil.innerHTML +=`
+                <p>${data} : ${dataNilai[data]}</p>`
+            };
+
+        });
+
+        document.getElementById("hapus").addEventListener("click", function (){
+            location.reload();
+        });
+    </script>
+</body>
+</html>

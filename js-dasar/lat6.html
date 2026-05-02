@@ -1,0 +1,443 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+</head>
+<body>
+    <script>
+        {
+            console.log("Soal 1");
+            let a = 10;
+            let b = 3;
+            let bagi = a / b;
+            let sisaBagi = a % b;
+            console.log(`${a} / ${b} = ${bagi} bersisa ${sisaBagi}`)
+        }
+        {
+            console.log("Soal 2");
+            let isLogin = true;
+            let isAdmin = false;
+            console.log(`Status Login: ${isLogin}, Status Admin: ${isAdmin}`);
+        }
+        {
+            console.log("Soal 3");
+            let namaDepan = "Raff";
+            let namaBelakang = "Pratama";
+            console.log(`${namaDepan} ${namaBelakang}`);
+        }
+        {
+            console.log("Soal 4");
+            let usia ;
+            usia = 20;
+            console.log(`usia saya ${usia} tahun`);
+        }
+        {
+            console.log("Soal 5")
+            let x = 5
+            let y = 2
+            let tambah = x + y;
+            console.log(tambah);
+            let kurang = x - y;
+            console.log(kurang);
+            let kali = x * y;
+            console.log(kali)
+            let bagi = x / y;
+            console.log(bagi)
+            let pangkat = x ** y;
+            console.log(pangkat)
+        }
+        {
+            console.log("Soal 6");
+            let a = 10;
+            let b = 20;
+
+            if (a > b){
+                console.log("Nila a itu belih besar dari nilai b");
+            } else if (a < b){
+                console.log("NIlai a itu lebih kecil dari nilai b ");
+            } else if (a == b){
+                console.log("Nilai a dan b itu sama");
+            }
+        }
+        {
+            console.log("Soal 7");
+            let nilai = 75;
+            if (nilai > 60 && nilai < 100){
+                console.log("Iya nilai itu valid");
+            } else {
+                console.log("Nilai itu tidak valid");
+            }
+        }
+        {
+            console.log("Soal 8");
+            console.log("Belajar JavaScript itu menyenangkan!");
+        }
+        {
+            console.log("Soal 9");
+            let nama = "Yuga";
+            let umur = 20;
+            console.log(`Halo, nama saya ${nama}, umur saya ${umur} tahun`);
+        }
+        {
+            console.log("Soal 10");
+            let angkaString = "123";
+            let konversiAngka = Number(angkaString);
+            konversiAngka += 7;
+            console.log(konversiAngka)
+        }
+        {
+            console.log("Soal 11");
+            const buah = ["mangga", "jeruk", "pisang", "apel", "semangka"];
+            console.log(buah);
+        }
+        {
+            console.log("Soal 12");
+            const buku = {
+                judul: "Laskar Pelangi",
+                penulis: "arrilasso",
+                tahun: 2010,
+            }
+
+            console.log(`Judul: ${buku.judul}, Penulis: ${buku.penulis} Tahun ${buku.tahun}`)
+        }
+        {
+            console.log("Soal 13");
+            let usia = 20;
+            if (usia >= 18){
+                console.log("dewasa");
+            } else if ( usia < 18){
+                console.log("Anak- anak");
+            }
+        }
+        {
+            console.log("Soal 14");
+            //const nama = prompt('masukan nama anda');
+            //alert(`Halo, ${nama}`);
+        }
+        {
+            console.log("Soal 15");
+            let contoh;
+            console.log(contoh)
+        }
+        {
+            console.log("Soal 16");
+            let nilaiUjian = 90;
+            if (nilaiUjian >= 70){
+                console.log("Selamat Anda Lulus");
+            } else if (nilaiUjian < 70 ){
+                console.log("Maaf anda harus menjalankan  remidial");
+            }
+        }
+        {
+            console.log("Soal 17");
+            let hari = 7;
+            switch (hari){
+                case 1 : console.log("Senin");
+                break;
+                case 2 : console.log("Selasa");
+                break;
+                case 3 : console.log("Rabu");
+                break;
+                case 4 : console.log("Kamis");
+                break;
+                case 5 : console.log("Jumat");
+                break;
+                case 6 : console.log("Sabtu");
+                break;
+                case 7 : console.log("Minggu");
+                break;
+            }
+        }
+        {
+            console.log("Soal 18");
+            let string = "dasdadasd";
+            let number = 1;
+            let boolean = true;
+            const array = [1, 2];
+
+            let test = typeof(string);
+            console.log(test);
+            test = typeof(number);
+            console.log(test)
+            test = typeof(boolean);
+            console.log(test)
+            test = typeof(array);
+            console.log(test)
+        }
+        {
+            console.log("Soal 19");
+            const mobil = {
+                merk: "toyota",
+                tahun: 2010,
+                warna: "hitam",
+            }
+
+            for (const dataMobil in mobil){
+                console.log(`${dataMobil}:  ${mobil[dataMobil]}`);
+            }
+            
+        }
+        {
+            console.log("Soal 20");
+            let nilai = 90;
+            let genap = nilai % 2 === 0 ? "Genap" : "Ganjil";
+            console.log(genap);
+        }
+        {
+            console.log("Soal 21");
+            let namaLengkap = "M Raffi Maulana Yusuf";
+            let umur = 20;
+            console.log(`Halo, nama saya ${namaLengkap}, umur saya ${umur} tahun`);
+        }
+        {
+            console.log("Soal 22");
+            let angka = 12;
+            angka = String(angka);
+            console.log(angka);
+            let string = "11";
+            string = Number(string);
+            console.log(string);
+        }
+        {
+            console.log("Soal 23");
+            const hewan = ["ayam" , "bebek", "kambing", "kuda", "sapi"];
+            for (const dataHewan of hewan){
+                console.log(`${dataHewan}`);
+            }
+        }
+        {
+            console.log("Soal 24");
+            const mahasiswa = {
+                nama: "adhitya",
+                jurusan: "Sistem Informasi",
+                angkatan: 2023,
+            }
+
+            const {nama:a, jurusan:b, angkatan:c} = mahasiswa;
+
+            console.log(`nama: ${a}, jurusan: ${b}, angkatan: ${c}`);
+        }
+        {
+            console.log("Soal 25");
+            let angka = -0;
+            if (angka){
+                console.log("truthly");
+            } else {
+                console.log("falsy");
+            }
+        }
+        {
+            console.log("Soal 26");
+            let warna = "kuning";
+            switch (warna){
+                case "merah" : console.log("kamu memilih warna merah");
+                break;
+                case "kuning" : console.log("kamu memilih warna kuning");
+                break;
+                case "biru" : console.log("kamu memilih warna biru");
+                break;
+                default: console.log("warna tidak dikenali");
+                break;
+            }
+        }
+        {
+            console.log("Soal 27");
+            let umur = 20;
+            let punyaSim = true;
+            if (umur >= 18 && punyaSim === true){
+                console.log("Boleh mengemudi");
+            } else {
+                console.log("Tidak boleh mengemudi")
+            }
+        }
+        {
+            console.log("Soal 28");
+            const film = {
+                judul: "Jujutsu Kaisen Zer0",
+                tahun: 2019,
+                genre: "Action",
+
+                get info(){
+                    return `Judul: ${this.judul}, Tahun: ${this.tahun}, Genre: ${this.genre}`;
+                }
+            }
+            console.log(film.info);
+        }
+        {
+            console.log("Soal 29");
+            const angka = [21,43,23,465,2];
+            for (const dataAngka in angka){
+                console.log(`${dataAngka} : ${angka[dataAngka]}`);
+            };
+        }
+        {
+            console.log('Soal 30');
+            let data = "hai";
+            if (data === null || data === undefined){
+                console.log("Data kosong");
+            } else if (typeof data === "string") {
+                console.log("Data adalah string");
+            } else if (typeof data === "number") {
+                console.log("Data adalah interger")
+            } else if (data === true || data === false){
+                console.log("Data adalah Boolean")
+            } else {
+                console.log("Data Invalid");
+            }
+        }
+        {
+            console.log("Soal 31");
+            let angka1 = 1;
+            let angka2 = 2;
+            let lebihDari = angka1 > angka2;
+            console.log(lebihDari);
+            let kurangDari = angka1 < angka2;
+            console.log(kurangDari);
+            let samaDengan = angka1 == angka2;
+            console.log(samaDengan);
+            let tidakSamaDengan = angka1 != angka2;
+            console.log(tidakSamaDengan);
+        }
+        {
+            console.log("Soal 32");
+            let isi = "JS"
+            if (isi == "JS"){
+                console.log("Mengandung JS");
+            } else {
+                console.log("Tidak Mengandung Js")
+            }
+        }
+        {
+            console.log("Soal 33");
+            const pegawai = {
+                nama: "raffi",
+                gaji: 1000000000000,
+                status: "Masih Hidup",
+                info: function(){
+                    console.log(`Perkenalkan Nama Saya ${this.nama} gaji saya Rp ${this.gaji.toLocaleString("id-ID")} status: ${this.status}`);
+                }
+            }
+            pegawai.info();
+        }
+        {
+            console.log("Soal 34");
+            const nilai = [10,20,30,40,50];
+            let hasil = 0;
+            for (const dataNilai of nilai){
+                hasil += dataNilai;
+                
+            }
+            console.log(hasil);
+        }
+        {
+            console.log("Soal 35");
+            let input;
+            let data = input;
+            data = input ?? "Data belum di isi";
+            console.log(data)
+        }
+        {
+            console.log("Soal 36");
+            
+            for(let i = 0; i <= 10 ; i++){
+                if(i === 5){
+                    continue;
+                }
+                console.log(i)
+            }
+        }
+        {
+            console.log("Soal 37");
+            function bilang(nama){
+                return `Halo, ${nama}`
+            }
+            console.log(bilang("Yuga"));
+        }
+        {
+            console.log("Soal 38")
+            const angka = [2, 4, 6, 8, 10];
+            let hasil = 0;
+            
+            angka.forEach(function(a){
+                hasil += a;
+            })
+            console.log(`${angka.join(" + ")} = ${hasil}`)
+        }
+        {
+            console.log("Soal 39");
+            const buku = {
+                judul: "40 Hari Lancar JavaScript",
+                penulis: "M Raffi Maulana",
+                tahun: 2030,
+                info: function(){
+                    return `Judul: ${this.judul}, Karya: ${this.penulis} Tahun ${this.tahun}`
+                }
+            }
+            console.log(buku.info());
+        }
+        {
+            console.log("Soal 40");
+            let genap = 2;
+            let test = genap % 2 == 0 ? "Genap" : "Ganjil";
+            console.log(test)
+        }
+        {
+            console.log("Soal 41");
+            let i = 1;
+            while (i <= 5){
+                console.log(i);
+                i++;
+            }
+        }
+        {
+            console.log("Soal 42");
+            let i = 1;
+            do {
+                console.log(i);
+                i++
+            } while (i <= 5);
+        }
+        {
+            console.log("Soal 43");
+            let kata = "hidup jokowiieeeeeee !!!";
+            if (kata.length > 5){
+                console.log("Kata Panjang");
+            } else {
+                console.log("Kata Pendek")
+            }
+        }
+        {
+            console.log("Soal 44");
+            const angka = [5, 10, 15, 20, 25];
+            let hasil = 0;
+            angka.forEach(function(a){
+                return hasil += a * 2;
+            });
+            console.log(hasil);
+        }
+        {
+            console.log("Soal 45");
+            let hari = 5;
+            switch (hari){
+                case 1 : console.log("Senin");
+                break;
+                case 2: console.log("Selasa");
+                break;
+                case 3 : console.log("Rabu");
+                break;
+                case 4 : console.log("Kamis");
+                break;
+                case 5 : console.log("Jumat");
+                break;
+                case 6 : console.log("Sabtu");
+                break;
+                case 7 : console.log("Minggu");
+                break;
+                default : console.log("Hari tidak Valid");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+document.writeln("JavaScript (Hello, WORLD!)");

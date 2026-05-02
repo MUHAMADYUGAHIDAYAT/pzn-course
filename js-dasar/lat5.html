@@ -1,0 +1,713 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+</head>
+<body>
+    <script>
+    {
+            'use strict';
+        const angka = [20,32,56,23,74,23,23,12];
+        function hitungTotal(angka){
+            let total = 0;
+            for (let i = 0;i< angka.length; i++){
+                total += angka[i];
+            }
+            console.info(`${angka.join(" + ")} = ${total}`);
+            return total;
+            
+        }
+        hitungTotal(angka);
+    }
+    {
+        console.log("Soal 1");
+        let angka1 = 25;
+        let angka2 = 7;
+
+        function tambah(angka1, angka2){
+            total = angka1 + angka2;
+            console.log(`${angka1} + ${angka2} = ${total}`);
+            return total;
+        }
+        function kurang(angka1, angka2){
+            total = angka1 - angka2;
+            console.log(`${angka1} - ${angka2} = ${total}`);
+            return
+        }
+        function kali(angka1, angka2){
+            total = angka1 * angka2;
+            console.log(`${angka1} x ${angka2} = ${total}`);
+            return
+        }
+        function bagi(angka1, angka2){
+            total = angka1 / angka2;
+            console.log(`${angka1} / ${angka2} = ${parseInt(total)} (${total} di bulatkan)`);
+            return
+        }
+        tambah(angka1, angka2);
+        kurang(angka1, angka2);
+        kali(angka1, angka2);
+        bagi(angka1, angka2);
+        
+    }
+    {
+        console.log("Soal 2")
+        let isRaining = true;
+        if(isRaining === true) {
+            console.log("Bawa Payung");
+        } else {
+            "Tidak perlu payung"
+        }
+    }
+    {
+        console.log("Soal 3");
+        let namadepan = "Muhamad";
+        let namaBelakang = "Yuga";
+
+        let namaLengkap = `${namadepan} ${namaBelakang}`;
+        console.log(namaLengkap);
+    }
+    {
+        console.log("Soal 4");
+        let umur = 18
+        console.log(umur);
+        umur ++;
+        console.log(umur);
+    }
+    {
+        console.log("Soal 5");
+        const panjang  = 10;
+        const lebar = 5;
+
+        const luas = panjang * lebar;
+        console.log(`Luas persegi panjang dengan panjang ${panjang} dan lebar ${lebar} adalah ${luas}`);
+    }
+    {
+        console.log("Soal 6");
+        const nilai1 = 10;
+        const nilai2 = "10";
+        if (nilai1 === nilai2){
+            console.log("Nilai nya sama");
+        } else {
+            console.info("Nilai nya tidak sama");
+        };
+    }
+    {
+        console.log("Soal 7");
+        const username = "admin";
+        const password = "12345";
+
+        if (username === "admin" && password === "12345"){
+            console.log("Login Berhasil");
+        } else {
+            console.log("Login Gagal");
+        };
+    }
+    {
+        console.log("Soal 8");
+        console.log("Ini console.log");
+        console.info("Ini console.info");
+        console.warn("Ini console.warn");
+        console.error("Ini console.error");
+    }
+    {
+        console.log("Soal 9");
+        let nama = "Yuga";
+        let usia = 19;
+        
+        let templateLiteral = `Halo, nama saya ${nama} dan usia saya ${usia} tahun`;
+        console.log(templateLiteral);
+    }
+    {
+        console.log("Soal 10");
+        let angkaString = "123";
+        let angka = parseInt(angkaString);
+        let jumlahkan = angka + 100;
+        console.log(jumlahkan);
+        console.log(typeof jumlahkan);
+
+        let jadiString = String(jumlahkan);
+        console.log(jadiString);
+        console.log(typeof jadiString);
+    }
+    {
+        console.log("Soal 11");
+        function cek(angka){
+            if (angka % 2 === 0) {
+                console.log("Genap");
+            } else {
+                console.log("Ganjil");
+            }
+        }
+        cek(12);
+    }
+    {
+        console.log("Soal 12");
+
+        let hari = 3;
+        switch (hari) {
+            case 1 : console.log("Senin");
+            break;
+            case 2 : console.log("Selasa");
+            break;
+            case 3 : console.log("Rabu");
+            break;
+            default : console.log("Value Hari Belum ada !");
+            break;
+        }
+    }
+    {
+        console.log("Soal 13");
+        let i = 1;
+        while(i <= 5){
+            console.log(i);
+            i++;
+        }
+    }
+    {
+        console.log("Soal 14");
+        let i = 5;
+        do {
+            console.log(i);
+            i--;
+        } while (i >= 1);
+    }
+    {
+        console.log("Soal 15");
+        let perkalian = 2 
+        for (let i = 1; i <= 5; i++){
+            hasil = perkalian * i;
+            console.log(`${perkalian} x ${i} = ${hasil}`);
+        };
+    }
+    {
+        console.log("Soal 16");
+        for (let i = 1; i <= 10; i++){
+            if(i % 2 === 0){
+                console.log(i);
+            }
+        }
+    }
+    {
+        console.log("Soal 17");
+        const angka = [];
+        let total = 0;
+        for(let i = 1; i <= 5; i++){
+            angka.push(i);
+            total += i;
+        }
+        console.log(`${angka.join(" + ")} = ${total}`)
+    }
+    {
+        console.log("Soal 18");
+        let i = 10;
+        while (i >= 1){
+            console.log(i);
+            i--;
+        }
+    }
+    {
+        console.log("Soal 19");
+        let perkalian = 3;
+        let i = 1;
+        do {
+            hasil = i * 3;
+            console.log(`${i} x ${perkalian} = ${hasil}`);
+            i++;
+        } while (i <= 5);
+    }
+    {
+        console.log("Soal 20");
+        for (let i = 1; i <= 10; i++){
+            if (i === 5) {
+                continue;
+            }
+            if (i === 8) {
+                break;
+            }
+            console.log(i);
+        }
+    }
+    {
+        console.log("Soal 21");
+        for (let i = 1; i <= 15; i++){
+            if (i % 2 === 0){
+                continue;
+            } else {
+                console.log(i);
+            }
+        }
+    }
+    {
+        console.log("Soal 22");
+        let kelipatan = 5;
+        let i = 1
+        while (i <= 10){
+            hasil = i * kelipatan;
+            console.log(hasil);
+            i++;
+        }
+    }
+    {
+        console.log("Soal 23");
+        let i = 20;
+        do {
+            console.log(i)
+            i--;
+        } while (i >= 1)
+    }
+    {
+        console.log("Soal 24");
+        let bintang = "";
+        for (let i = 1; i <= 5; i++){
+            bintang += "*"
+            console.log(bintang)
+        }
+    }
+    {
+        console.log("Soal 25");
+        let hasil = 0;
+        for (let i = 1; i <= 20; i++){
+            if (i % 4 === 0 ){
+                continue;
+            } 
+            hasil += i;
+            
+        }
+        console.info(hasil);
+    }
+    {
+        console.log("Soal 26");
+        let kelipatan = 3;
+        for (let i = 1; i <= 30; i++){
+            if (i % kelipatan === 0){
+                console.log(i);
+            }
+        }
+    }
+    {
+        console.log("Soal 27");
+        let i = 1;
+        while (i <= 15){
+            i++;
+            if (i % 2 === 0){
+                continue;
+            }
+            console.log(i);
+            
+        }
+    }
+    {
+        console.log("Soal 28");
+        let i = 50;
+        do {
+            console.log(i);
+            i--;
+        } while (i >= 40);
+    }
+    {
+        let angka = [];
+        console.log("Soal 29");
+        for (i = 1 ; i <= 5; i++){
+            angka += i;
+            console.info(angka)
+        }
+    }
+    {
+        console.log("Soal 30");
+        let kelipatan = 6;
+        let total = [];
+        let hasil = 0;
+        for (let i = 1 ; i < 20 ; i++){
+            if (i % 2 === 0) {
+                if (i % kelipatan === 0){
+                continue;
+                }
+                total.push(i);
+            }
+        }
+        for (let i = 0 ; i < total.length; i++){
+            hasil += total[i];
+        }
+        
+        console.log(`${total.join(" + ")} = ${hasil}`);
+    }
+    {
+        console.log("Soal 31");
+        let kelipatan = 7;
+        for (let i = 1; i <= 50 ; i++){
+            if (i % kelipatan === 0){
+                console.log(i);
+
+            }
+        }
+    }
+    {
+        console.log("Soal 32");
+        let i = 100
+        while (i >= 80){
+            console.log(i);
+            i--;
+        }
+    }
+    {
+        console.log("Soal 33");
+        let i = 0
+        do{
+            i++
+            if (i % 2 === 0){
+                continue;
+            }
+            console.log(i);
+        } while (i <= 15);
+    }
+    {
+        console.log("Soa 34");
+        const angka = [];
+        let genap = 2;
+        for (let i = 1 ; i <= 20 ; i++){
+            if ( i % genap === 0){
+                angka.push(i);
+            }
+        }
+        let hasil = 0;
+        console.log(angka)
+            for (let i = 0 ; i < angka.length; i++){
+            hasil += angka[i];
+        }
+        console.log(`${angka.join(" + ")} = ${hasil}`);
+    }
+    {
+        console.log("Soal 35");
+        for (let i = 5; i >= 1; i--) {
+            let baris = "";
+        for (let j = 1; j <= i; j++) {
+            baris += "*";
+        }
+        console.log(baris);
+        }
+    }
+    {
+        console.log("Soal 36");
+        function tambah(a, b){
+            hasil = a + b;
+            console.log(hasil);
+            return;
+        }
+        tambah(5, 7);
+    }
+    {
+        console.log("Soal 37");
+        function pangkat(a, b){
+            hasil = a ** b;
+            console.log(hasil);
+            return;
+        }
+        pangkat(2, 3)
+    }
+    {
+        console.log("Soal 38");
+        function cekUmur(umur){
+            if (umur >= 18){
+                console.log("Dewasa");
+            } else if (umur >= 0) {
+                console.log("Belum dewasa");
+            } else {
+                console.warn(`umur ${umur} tidak valid`);
+            }
+        }
+        cekUmur(-1);
+    }
+    {
+        console.log("Soal 39");
+        function luasPersegiPanjang(panjang, lebar){
+            luas = panjang * lebar;
+            console.log(luas);
+            return;
+        }
+        luasPersegiPanjang(5, 3);
+    }
+    {
+        console.log("Soal 40");
+        function greeting(nama){
+            console.info(`Hello, ${nama}!`);
+            return;
+        }
+        greeting("Yuga");
+    }
+    {
+        console.log("Soal 41");
+        function salam(nama = "tamu"){
+            console.log(`Halo, ${nama}`);
+        }
+        salam();
+        salam("Yuga");
+    }
+    {
+        console.log("Soal 42")
+        function luasLingkaran(r){
+            let luas = 3.14 * (r ** 2);
+            console.log(luas);
+            return luas;
+        }
+        luasLingkaran(7);
+    }
+    {
+        console.log("Soal 43");
+        const kelilingPersegi = function(sisi) {
+            let keliling = 4 * sisi;
+            console.log(keliling);
+            return keliling;
+        }
+        kelilingPersegi(4);
+    }
+    {
+        console.log("Soal 44");
+        const kuadrat = (angka) => {
+            let hasil = angka ** 2;
+            console.log(hasil);
+        }
+        kuadrat(5);     
+    }
+    {
+        console.log("Soal 45");
+        function hitung(a, b){
+            let hasil = 0;
+            function tambah(a, b){
+                hasil = a + b;
+                return hasil;
+            }
+            function kali(a, b){
+                hasil = a * b;
+                return hasil;
+            }
+            return {tambah, kali};
+        }
+        tambah(2, 3);
+        kali(2, 3);
+    }
+    {
+        console.log("Soal 46");
+        nama = "Yuga";
+        function sapaan(nama){
+            nama ="Raffi"
+            console.log(`Halo ${nama}`);
+            return nama;
+        }
+        sapaan();
+        sapaan();
+    }
+    {
+        console.log("Soal 47");
+        function faktorial(value){
+            if (value === 1){
+                return 1
+            } else {
+                return value * faktorial(value - 1);
+            }
+        }
+        console.log(faktorial(5))
+    }
+    {
+        console.log("Soal 48");
+        function hitung(){
+            let hitung = 0;
+            function tambah(){
+                hitung ++;
+                console.log(hitung);
+                return hitung
+            }
+            tambah();
+
+            return {hitung, tambah};
+        }
+        const hasil = hitung();
+        hasil.tambah();
+        hasil.tambah();
+        hasil.tambah();
+
+    }
+    {
+        console.log("Soal 49");
+        const user = {
+            nama: "Raffi",
+            sayHello: function (){
+                console.log(`Halo, nama saya ${this.nama} = Ayam`);
+            }
+        }
+        user.sayHello();
+    }
+    {
+        console.log("Soal 50");
+        const mahasiswa = {
+            nama: "Raffi",
+            perkenalkan: function(){
+                console.log(`Perkenalkan nama saya ${this.nama}`);
+            }
+        }
+        mahasiswa.perkenalkan();
+    }
+    {
+        console.log("Soal 51");
+        const hewan = {
+            nama: "ayam",
+            suara: "poke luu pokee",
+            bunyi: ()=>{
+                console.log(`${this.nama} suara ${this.suara}`)
+            }
+        }
+        hewan.bunyi();
+    }
+    {
+        console.log("Soal 52");
+        const persegi = {
+            sisi: 5,
+
+            get luas(){
+                hasil = this.sisi * this.sisi;
+                return `${hasil}`
+            }
+        }
+        console.log(persegi.luas);
+    }
+    {
+        console.log("Soal 53");
+        const barang = {
+            nama: "",
+            harga: 0,
+
+            get info (){
+                return `Nama: ${this.nama}, Harga: ${this.harga}`;
+            },
+            set info(value){
+                const [a, b] = value.split(";");
+                this.nama = a;
+                this.harga = Number(b);
+            }
+        }
+        barang.info = "Asus;7500000";
+        console.log(barang.info)
+    }
+    {
+        console.log("Soal 54");
+        <!-- males nyelsaike masalah var -->
+    }
+    {
+        console.log("Soal 55")
+        const mahasiswa = {
+            nama: "Raffi",
+            umur: 20,
+            alamat: {
+                kota: "Palembang",
+                negara: 'Indonesai'
+            },
+        }
+
+        const {nama: nama, umur: umur, alamat :{kota: kota}} = mahasiswa;
+        console.log(`Nama: ${nama}, Kota: ${kota}`);
+    }
+    {
+        console.log("Soal 56");
+        const kendaraan = {
+            nama: "motor",
+            bunyi: function (){
+                console.log(`${this.nama} bruruuururuururururuururum bruurumr ru uu rrum`)
+            }
+        }
+        kendaraan.bunyi();
+
+    }
+    {
+        console.log("Soal 57");  
+        const lingkaran = {
+            jari: 10,
+
+            get luas (){
+                return 3.14 * (this.jari ** 2);
+            }
+        }
+        console.log(lingkaran.luas)
+    }
+    {
+        console.log("Soal 58");
+        const produk= {
+            nama: "",
+            harga: 0,
+
+            get detail (){
+                return `Nama: ${this.nama},  Harga: ${this.harga}`;
+            },
+            set detail(value){
+                const [a, b] = value.split(";");
+                this.nama = a;
+                this.harga = Number(b);
+            }
+        }
+        produk.detail = "kipas Angin;3000000";
+        console.log(produk.detail);
+    }
+    {
+        console.log("Soal 59");
+        const siswa = {
+            nama: "Raffi",
+            umur: 20,
+            perkenalan: function(){
+                return `Halo, Perkenalkan nama saya ${this.nama}, umur ${this.umur} tahun`
+            }
+        }
+        console.log(siswa.perkenalan());
+    }
+    {
+        console.log("Soal 60")
+        const karyawan = {
+            nama: "siti",
+            umur: 22,
+            pekerjaan: {
+                jabatan: "Designer",
+                lokasi: "Bandung",
+            }
+        }
+        const {nama: a,
+        pekerjaan: {lokasi: b}} = karyawan;
+        console.log(`Nama: ${a}, Lokasi: ${b}`)
+    }
+    {
+        let umur  = 18;
+        if(umur >= 18){
+            console.log("Dewasa");
+        } else if (umur < 12){
+            console.log("Anak - anak");
+        }
+    }
+    {
+        let musim = 1;
+        switch (musim){
+            case 1 : console.log("Musim Semi");
+            break;
+            case 2 : console.log("Musim Panas");
+            break;
+            case 3 : console.log("Musim Hujan");
+            break;
+            case 4 : console.log("Musim Salju");
+            break;
+        }
+    }
+    {
+        const buku = {
+            judul: "Cara Menjadi Hacker Pemula No root",
+            pengarang: "M Adhitya Pangestu",
+            tahunTerbit: 2025,
+        }
+        for (const dataBuku in buku){
+            console.log(`${dataBuku}: ${buku[dataBuku]}`);
+        }
+    } 
+    {
+        const nilai = 90;
+        const cek = nilai >= 80 ? "Lulus" : "Gagal";
+        console.log(cek);
+    }
+</script>
+</body>
+</html>

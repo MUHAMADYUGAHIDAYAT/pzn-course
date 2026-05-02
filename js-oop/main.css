@@ -1,0 +1,121 @@
+.idx-body {
+    margin: 0;
+}
+.idx-container {
+    position: relative;
+
+}
+.idx-container h1 {
+    display: grid;
+    text-align: center;
+    background-color: red;
+    margin: 0;
+    padding: 20px;
+    border: 0;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.idx-content {
+    text-align: center;
+    opacity: 0;
+    transition: ease-in 0.3s;
+}
+.idx-content:hover {
+    opacity: 1;
+}
+.idx-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.idx-content ul li {
+    list-style-type: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(250, 92, 64);
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.idx-container h1:hover  + .idx-content {
+    opacity: 1;
+}
+
+.idx-a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.6s ease;
+}
+.idx-a:hover {
+    display: block;
+    background-color: rgb(102, 0, 0);
+    color: rgb(255, 187, 0);
+    padding: 10px;
+}
+
+#d-object {
+    background-color: rgb(253, 130, 30);
+}
+#d-constructor-inheritance {
+    background-color: rgb(253, 130, 30);
+}
+#d-prototype {
+    background-color: rgb(253, 130, 30);
+}
+#d-prototype-inheritance {
+    background-color: rgb(253, 130, 30);
+}
+#d-class {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-constru {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-prop {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-method {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-inherit {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-super-construc {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-super-method {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-get-and-set {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-pub-f {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-priv-f {
+    background-color: rgb(253, 130, 30);
+}
+#d-private-method {
+    background-color: rgb(253, 130, 30);
+}
+#d-operator-instanceof {
+    background-color: rgb(253, 130, 30);
+}
+#d-class-s-field {
+    background-color: rgb(253, 130, 30);
+}
+#d-static-method {
+    background-color: rgb(253, 130, 30);
+}
+#d-error {
+    background-color: rgb(253, 130, 30);
+}
+#d-error-handling {
+    background-color: rgb(253, 130, 30);
+}
+#d-error-class {
+    background-color: rgb(253, 130, 30);
+}
+#d-iterable-i {
+    background-color: rgb(253, 130, 30);
+}

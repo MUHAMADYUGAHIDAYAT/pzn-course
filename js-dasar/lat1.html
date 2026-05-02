@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Latihan 1: Input Nilai Mahasiswa</title>
+    <style>
+        .content {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+        .content .judul {
+            display: block;
+            text-align: center;
+            background-color: rgb(218, 1, 1);
+            color: rgb(255, 255, 255);
+        }
+        .content .judul h2 {
+            margin: 0;
+            padding: 10px;
+        }
+        .content .isi{
+            display: grid;
+            grid-template-columns: 90px 10px 150px;
+            grid-template-rows: 25px 25px 25px 25px 25px;
+            gap: 7px;
+            color: rgb(255, 181, 43);
+            background-color: brown;
+            justify-content: center;
+            align-items: center;
+        }
+        #hapus {
+            width: 90px;
+        }
+        .content .hasil {
+            display: grid;
+            gap: 0px;
+            justify-content: center;
+            background-color: rgb(165, 126, 42);
+            color: rgb(255, 191, 106);
+        }
+        .content .hasil p {
+            margin: 0px;
+            padding: 3px;
+        }
+        .grade {
+            display: block;
+            color: rgb(24, 24, 255);
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="judul">
+                <h2>Input Nilai Mahasiswa</h2>
+            </div>
+            <div class="isi">
+                <label for="nama"> Nama </label>
+                <p>:</p>
+                <input type="text" name="nama" id="nama"> 
+                <label for="jurusan"> Jurusan </label>
+                <p>:</p>
+                <input type="text" name="jurusan" id="jurusan"> 
+                <label for="semester"> Semester </label>
+                <p>:</p>
+                <input type="number" name="semester" id="semester"> 
+                <label for="mk"> Mata Kuliah </label>
+                <p>:</p>
+                <input type="text" name="mk" id="mk"> 
+                <label for="nilai"> Nilai </label>
+                <p>:</p>
+                <input type="number" name="nilai" id="nilai"> 
+                <button type="submit" id="simpan">Simpan</button>
+                <p> </p>
+                <button type="submit" id="hapus">Hapus</button>
+            </div>
+            <div class="hasil" id="hasil">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("simpan").addEventListener("click", function (){
+            let nama = document.getElementById("nama").value;
+            let jurusan = document.getElementById("jurusan").value;
+            let semester = Number(document.getElementById("semester").value);
+            let mk = document.getElementById("mk").value;
+            let nilai = Number(document.getElementById("nilai").value);
+            
+
+            if(nama === "" || jurusan === "" || semester === 0 || mk === "" || nilai === 0){
+                alert("Harap mengisi format terlebih dahulu!");
+                return;
+            }
+
+            let grade = nilai;
+            if(grade >= 80){
+                grade = `<p class="grade">Grade : A</p>`;
+            } else if(grade >= 70){
+                grade = `<p class="grade">Grade : B</p>`;
+            } else if(grade >= 60){
+                grade = `<p class="grade">Grade : C</p>`;
+            } else if(grade >= 50){
+                grade = `<p class="grade">Grade : D</p>`;
+            } else {
+                grade =`<p class="grade">Grade : E</p>`;
+            }
+
+            let dataMahasiswa = {
+            nama : nama,
+            jurusan : jurusan,
+            semester : semester,
+            mk : mk,
+            nilai : nilai,
+            };
+
+            let hasil = document.getElementById("hasil");
+            hasil.innerHTML = "";
+
+            for(const data in dataMahasiswa){
+            hasil.innerHTML += `<p>${data} : ${dataMahasiswa[data]}</p>`;
+            }
+
+            hasil.innerHTML += grade; 
+        });
+
+        document.getElementById("hapus").addEventListener("click", function (){
+            document.getElementById("nama").value = "";
+            document.getElementById("jurusan").value = "";
+            document.getElementById("semester").value = "";
+            document.getElementById("mk").value = "";
+            document.getElementById("nilai").value = "";
+            document.getElementById("grade").value = "";
+            document.getElementById("hasil").innerHTML = "";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+</head>
+<body>
+    <script>
+    {
+        console.log("Soal 1");
+        function Mobil(merk, tahun, warna){
+            this.merk = merk;
+            this.tahun = tahun;
+            this.warna = warna;
+            this.info = function (){
+                return `Mobil ${this.merk} tahun ${this.tahun}, warna ${this.warna}`;
+            }
+        }
+
+        const mobil1 = new Mobil("Toyota", 2020, "Hitam");
+        const mobil2 = new Mobil("Honda", 2022, "Putih");
+        
+        console.log(mobil1.info())
+        console.log(mobil2.info())
+    }
+    {
+    class Person {
+    #name;
+        constructor(name) {
+            this.#name = name;
+        }
+        greet() {
+            return `Hello, my name is ${this.#name}`;
+        }
+    }
+    const alice = new Person("Alice");
+    console.log(alice.greet());
+    //console.log(alice.#name)
+    }
+    {
+        console.log("Soal 1");
+
+        class Kendaraan{
+
+            constructor(roda){
+                this.roda = roda;
+            }
+        }
+        class Mobil extends Kendaraan{
+            constructor(roda, merk){
+                super(roda);
+                this.merk = merk;
+            }
+        }
+        const avanza = new Mobil(4, "Toyota");
+        console.log(avanza);
+        console.log(avanza.roda);
+        console.log(avanza.merk);
+    }
+    {
+        console.log("Soal 2");
+        class Orang{
+            constructor(nama){
+                this.nama = nama;
+            }
+
+        }
+        class Karyawan extends Orang{
+            constructor(nama, id){
+                super(nama);
+                this.idKaryawan = id;
+            }
+        }
+        const karyawan1  = new Karyawan("Budi", "E001");
+        console.log(karyawan1);
+        console.log(karyawan1.nama);
+        console.log(karyawan1.idKaryawan);
+    }
+    {
+        console.log("Soal 3");
+        class AlatElektronik{
+            constructor(voltase){
+                this.volt = voltase + "V";
+            }
+        }
+
+        class Laptop extends AlatElektronik {
+            constructor(voltase, merek){
+                super(voltase);
+                this.merek = merek;
+            }
+        }
+
+        const macbook = new Laptop(220, "Apple");
+        console.log(macbook);
+        console.log(macbook.volt);
+        console.log(macbook.merek);
+
+    }
+    {
+        console.log("Soal 4");
+        class BangunDatar{
+            constructor(warna = "hitam",){
+                this.warna = warna;
+            }
+        }
+
+        class Lingkaran extends BangunDatar{
+            constructor(jariJari){
+                super("Biru");
+                this.jariJari = jariJari;
+            }
+        }
+        const bola = new Lingkaran(10);
+        console.log(bola);
+        console.log(bola.warna);
+        console.log(bola.jariJari);
+    }
+
+    {
+        console.log("Soal 5");
+        class MakhlukHidup {
+            constructor(namaSpesies){
+                this.namaSpesies = namaSpesies;
+            }
+        }
+
+        class Hewan extends MakhlukHidup{
+            constructor(spesies, jumlahKaki){
+                super(spesies);
+                this.jumlahKaki = jumlahKaki;
+            }
+        }
+
+        class Burung extends Hewan{
+            constructor(spesies, kaki, bisaTerbang){
+                super(spesies, kaki);
+                this.bisaTerbang = bisaTerbang;
+            }
+        }
+
+        const elang = new Burung("Elang Jawa", 2, true);
+        console.log(elang);
+        console.log(elang.namaSpesies);
+        console.log(elang.jumlahKaki);
+        console.log(elang.bisaTerbang);
+
+    }
+    </script>
+</body>
+</html>

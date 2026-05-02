@@ -1,0 +1,104 @@
+.idx-body {
+    margin: 0;
+}
+.idx-container {
+    position: relative;
+
+}
+.idx-container h1 {
+    display: grid;
+    text-align: center;
+    background-color: red;
+    margin: 0;
+    padding: 20px;
+    border: 0;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.idx-content {
+    text-align: center;
+    opacity: 0;
+    transition: ease-in 0.3s;
+}
+.idx-content:hover {
+    opacity: 1;
+}
+.idx-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.idx-content ul li {
+    list-style-type: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(250, 92, 64);
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.idx-container h1:hover  + .idx-content {
+    opacity: 1;
+}
+
+.idx-a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.6s ease;
+}
+.idx-a:hover {
+    display: block;
+    background-color: rgb(102, 0, 0);
+    color: rgb(255, 187, 0);
+    padding: 10px;
+}
+
+#wo-mod {
+    background-color: rgb(255, 197, 111);
+}
+
+#w-mod {
+
+    background-color: rgb(255, 194, 102);
+}
+
+#var-mod {
+    background-color: rgb(255, 191, 94);
+}
+#c-mod {
+    background-color: rgb(255, 187, 86);
+}
+
+#m-ex {
+    background-color: rgb(255, 185, 80);
+}
+
+#d-fuc {
+    background-color: rgb(250, 179, 73);
+}
+
+#d-var {
+    background-color: rgb(248, 176, 67);
+}
+
+#d-class {
+    background-color: rgb(250, 175, 63);
+}
+
+#d-and-n {
+    background-color: rgb(250, 175, 63);
+
+}
+
+#mod-obj {
+    background-color: rgb(250, 175, 63);
+}
+
+#agg {
+    background-color: rgb(250, 175, 63);
+
+}
+
+#dyn-mod {
+    background-color: rgb(250, 175, 63);
+}
