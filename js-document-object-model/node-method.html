@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Method</title>
+</head>
+<body>
+    <!-- contoh pengunaan node biasa -->
+    <ul id="menu">
+        <li id="Pertama">Pertama</li>
+        <li id="Kedua">Kedua</li>
+        <li id="Ketiga">Ketiga</li>
+    </ul>
+
+    <script>
+        // di panggil menggunakan id 
+        const menu = document.getElementById("menu");
+        // penggunaan method dalam node
+
+        menu.removeChild(document.getElementById("Pertama")); // menghapus li pertama
+        menu.removeChild(document.getElementById("Kedua")); // menghapus li kedua
+        menu.removeChild(document.getElementById("Ketiga")); // menghapus li ketiga
+        
+    </script>
+</body>
+</html>
