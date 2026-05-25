@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Property</title>
+</head>
+<body>
+    <!-- contoh pengunaan node biasa -->
+    <ul id="menu">
+        <li id="Pertama">Pertama</li>
+        <li id="Kedua">Kedua</li>
+        <li id="Ketiga">Ketiga</li>
+    </ul>
+
+    <script>
+        // di panggil menggunakan id 
+        const menu = document.getElementById("menu");
+        console.info(menu);
+        console.info(menu.childNodes) //penggunaan property di panggil di samping variable yang ingin di panggil
+
+
+        const pertama = document.getElementById("Pertama");
+        console.info(pertama);
+        console.info(pertama.textContent);
+
+        //hitungan sibling nya dimulai tergantung apa yang di panggil di nodelist nya
+        console.info(pertama.previousSibling.previousSibling); // ini hasil nya bisa null karena mundur 2 langkah di array 1 li#pertama karena mundur 2 langkah itu sudah melebih 0 jadi tidak ada array lagi
+        console.info(pertama.previousSibling); // ini hasil nya #text karena bisa lihat di nodelist ini mundur 1 langkah di bagian  array 1 li#pertama karena di antara tag li itu ada #text KARENA ENTER yang terhitung di dalam nodelist solusinya agar dia bisa langsung memanggil previousSibling tanpa #text ialah membuat li tanpa enter contoh 
+        //     <ul id="menu">
+        //             <li id="Pertama">Pertama</li><li id="Kedua">Kedua</li><li id="Ketiga">Ketiga</li>
+        //     </ul>
+        //
+        
+        console.info(pertama.nextSibling.nextSibling); // ini hasil nya li kedua karena dia maju 2 langkah memanggil array ke 3 yang di mulai dari array 1 pertama dari nodelist 
+
+    </script>
+</body>
+</html>
