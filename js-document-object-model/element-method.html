@@ -11,8 +11,11 @@
     </div>
 
     <script>
-        document.getElementById("title").remove();
-        document.getElementById("description").remove();
+        // untuk penggunaan method pada elemant di gunakan di samping element yang di panggil atau variable dari element nya contoh
+        document.getElementById("title").remove(); // ini penggunaan langsung setelah id element nya di panggil
+
+        const desc = document.getElementById("description");
+        desc.remove(); // ini penggunaan setelah element jadi variable
     </script>
 </body> 
 </html>
