@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node List</title>
+</head>
+<body>
+    <!-- contoh penggunaan nodelist untuk memanggil semua li -->
+    <ul id="menu1">
+        <li id="pertama">Pertama</li>
+        <li id="kedua">Kedua</li>
+        <li id="ketiga">Ketiga</li>
+    </ul>
+
+    <ul id="menu2"><li>Muhamad</li><li>Yuga</li><li>Hidayat</li></ul>
+
+    <script>
+
+        const list = document.querySelectorAll("li"); // menggunakan method .querySelectorALL dan element node apa yang ingin di panggil semua contoh nya ini element li semua nya di panggil dalam variable list
+        console.info(list);
+
+        const menu1 = document.getElementById("menu1").childNodes; //menggunakan property .childNode untuk memanggil node list sesuai id 
+        console.info(menu1); //disini bisa muncul 7 node list karena seperti yang saya jelaskan di awal awal node itu juga membaca enter didalam code jadi hitungan nya jadi seperti ini
+        // 0: text
+        // 1: li#pertama
+        // 2: text
+        // 3: li#kedua
+        // 4: text
+        // 5: li#ketiga
+        // 6: text
+        // nah di bagian text itu bisa muncul karena ada enter dalam node solusi nya kalo mau langsung hitungan nya ke li#pertama seperti kemarin buat li nya tanpa enter seperti di menu2
+
+        const menu2 = document.getElementById("menu2").childNodes;
+        console.info(menu2); 
+
+        
+
+    </script>
+</body>
+</html>
