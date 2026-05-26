@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node List Live</title>
+</head>
+<body>
+        <ul id="menu1">
+        <li id="pertama">Pertama</li>
+        <li id="kedua">Kedua</li>
+        <li id="ketiga">Ketiga</li>
+    </ul>
+
+    <ul id="menu2"><li>Muhamad</li><li>Yuga</li><li>Hidayat</li></ul>
+
+    <script>
+
+        const list = document.querySelectorAll("li"); 
+        console.info(list);
+
+        const menu1 = document.getElementById("menu1").childNodes; 
+        console.info(menu1);  
+
+        const menu2 = document.getElementById("menu2").childNodes;
+
+
+        
+
+    </script>
+</body>
+</html>
