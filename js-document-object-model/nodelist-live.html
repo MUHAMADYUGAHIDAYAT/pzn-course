@@ -5,27 +5,29 @@
     <title>Node List Live</title>
 </head>
 <body>
+    <!-- contoh live node -->
         <ul id="menu1">
         <li id="pertama">Pertama</li>
         <li id="kedua">Kedua</li>
         <li id="ketiga">Ketiga</li>
     </ul>
 
-    <ul id="menu2"><li>Muhamad</li><li>Yuga</li><li>Hidayat</li></ul>
+    <ul id="menu2">
+        <li>Muhamad</li>
+        <li>Yuga</li>
+        <li>Hidayat</li>
+    </ul>
 
     <script>
+        const menu1 = document.getElementById("menu1");
+        const list = menu1.childNodes
+        console.info(list); // bisa di lihat di console ini node list nya hanya 7
 
-        const list = document.querySelectorAll("li"); 
-        console.info(list);
+        // melakukan penambahan element menggunakan appendChild dan createElement 
+        menu1.appendChild(document.createElement("li"));
+        menu1.appendChild(document.createElement("li"));
 
-        const menu1 = document.getElementById("menu1").childNodes; 
-        console.info(menu1);  
-
-        const menu2 = document.getElementById("menu2").childNodes;
-
-
-        
-
+        console.info(list) // node list nya menjadi 9 dan li nya langsung live atau perubahan yang terjadi itu langsung ditampilkan di dalam html
     </script>
 </body>
 </html>
