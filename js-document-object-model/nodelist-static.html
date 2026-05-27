@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node List Live</title>
+</head>
+<body>
+    <!-- contoh satatic node -->
+        <ul id="menu1">
+        <li id="pertama">Pertama</li>
+        <li id="kedua">Kedua</li>
+        <li id="ketiga">Ketiga</li>
+    </ul>
+
+    <ul id="menu2">
+        <li>Muhamad</li>
+        <li>Yuga</li>
+        <li>Hidayat</li>
+    </ul>
+
+    <script>
+
+        let list = document.querySelectorAll("li"); // menggunakan query selector untuk mengambil semua li
+        const menu1 = document.getElementById("menu1");
+        console.info(list) // ini hasil nya 6 
+        menu1.appendChild(document.createElement("li")); // kita gunakan append dan create element untuk menambahkan li
+        menu1.appendChild(document.createElement("li"));
+
+        console.info(list) // nah ini hasil nya tetap 6 dan li yang kita append 2 kali tidak masuk karena queryselector hanya mengambil li pada saat dia panggil saja jadi setelah dia di panggil tapi ada tambahan li. li itu tidak terbaca oleh karena itu ini di sebut static
+
+        // cara agar node static bisa terupdate adalah dengan deklasi ulang query seprti ini
+        list = document.querySelectorAll("li");
+        console.log(list); // bisa di lihat di console sekarang nodenya sudah terupdate menjadi 8 
+    </script>
+</body>
+</html>
