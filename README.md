@@ -130,7 +130,7 @@ Modul di **Bagian 8** (`js-modules/`) **wajib** dijalankan via HTTP server (buka
 | JS OOP | Selesai | 100% |
 | JS Standard Library | Selesai | ~100% |
 | JS Modules | Selesai | 100% |
-| **JS DOM** | **Sedang berjalan** | **~60%** |
+| **JS DOM** | **Sedang berjalan** | **~65%** |
 
 ---
 
