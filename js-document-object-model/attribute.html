@@ -7,14 +7,24 @@
 <body>
 <!-- attribute itu adalah informasi atau pengaturan tambahan yang di ketik di dalam tag pembuka html -->
     <img id="Noir" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sY0NaIZwFKtWO8DT13iLeehlQGMi8BVdgA&s" alt="Spider-Man Noir">
+<br> <br> <br>
+    <img id="Parker" src="https://upload.wikimedia.org/wikipedia/id/7/74/Spider-Man547.jpg" alt="Spider-Man">
 
     <script>
 // cara mengambil attribut di js
         const Noir = document.getElementById("Noir"); // panggil attribute ke dalam variable contoh nya ini id 
-        const src = Noir.getAttributeNode("src"); // gunakan getAttributteNode untuk memanggil attribute node src nya
+        const src = Noir.getAttributeNode("src"); // gunakan getAttributteNode() untuk memanggil attribute node src nya
 
+        console.info(src);
         console.info(src.name); //untuk memanggil nama nya
         console.info(src.value); //  untuk memanggil value nya
+
+
+// tapi ada cara lain untuk langsung memanggil value nya
+        const Parker = document.getElementById("Parker");
+        const src2 = Parker.getAttribute("src"); //menggunakan getAttribute() untuk langsung memanggil value tanpa menggunakan property object
+
+        console.info(src2); // langsungg panggil variable nya tanpa harus menggunakan property object 
 
 
     </script>
