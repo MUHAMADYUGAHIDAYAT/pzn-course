@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+</head>
+<body>
+<!-- attribute itu adalah informasi atau pengaturan tambahan yang di ketik di dalam tag pembuka html -->
+    <img id="Noir" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sY0NaIZwFKtWO8DT13iLeehlQGMi8BVdgA&s" alt="Spider-Man Noir">
+
+    <script>
+// cara mengambil attribut di js
+        const Noir = document.getElementById("Noir"); // panggil attribute ke dalam variable contoh nya ini id 
+        const src = Noir.getAttributeNode("src"); // gunakan getAttributteNode untuk memanggil attribute node src nya
+
+        console.info(src.name); //untuk memanggil nama nya
+        console.info(src.value); //  untuk memanggil value nya
+
+
+    </script>
+</body>
+</html>
