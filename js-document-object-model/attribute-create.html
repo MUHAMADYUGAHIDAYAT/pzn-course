@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Create</title>
+</head>
+<body>
+    <!-- cara pembuatan attribute di dalam js -->
+    <img alt="logo baseng" id="logo">
+    <img alt="logo baseng2" id="logo2">
+    <!-- ada dua cara -->
+    <script>
+        //cara pertama
+        // panggil dlu elemnt id nya 
+        const logo = document.getElementById("logo"); 
+
+        
+        const src = document.createAttribute("src"); // create attribute menggunakan createAttribute("")
+        src.value = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxDPWcwbEMcz9paPMNT0RtHzC02GWB63o_w&s"; //masukan value ke attribute yang di crete tadi
+        logo.setAttributeNode(src); //set attribut nya di element id yang di panggil di awal
+
+        //cara kedua
+        // paggil dlu element id nya juga
+        const logo2 = document.getElementById("logo2");
+
+        logo2.setAttribute("src", "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg?t=1762888662"); //  langsung create attribute, set value,  set attribut
+        // sebenarnya cara kedua ini alurnya sama dengan cara pertama tapi ini syntax nya lebih pendeek karena dia langsug meng create dan set value dan attribut nya di dalam object method scope nya
+
+
+    </script>
+</body>
+</html>
