@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Node Map</title>
+</head>
+<body>
+    <!-- namednodemap adalah kumpulan dari attribute -->
+    <!-- dia juga turunan dari iterasi jadi bisa melakukan perulangan -->
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/3840px-LEGO_logo.svg.png" alt="lego" id="logo" height="50px" width="50px">
+
+    <script>
+        // cara menggunakan NamedNodeMap
+        const logo = document.getElementById("logo");
+        const att = logo.attributes // menggunakan .attributes pada ide element yang di panggil 
+        console.info(att)// ini berisi seluruh attribute dari element tag yang di panggil
+
+
+        //contoh penggunaan Named Node Map dengan iterator
+        for (let attr of att){
+            console.info(`${attr.name} : ${attr.value}`);
+        }
+
+        //sebenarnya mirip node tapi ini lebih ke kumpulan dari attribute
+        //oh iya sedikit catatan walaupun Named node map itu turunan iterasi tapi dia tidak bisa menggunakan .forEach() atau method yang memanupulasi array lainya karena named node map itu bukanlah array murni.
+
+    </script>
+</body>
+</html>
