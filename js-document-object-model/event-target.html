@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event target</title>
+</head>
+<body>
+    <!-- event handler -->
+    <!-- adalah sebuah function yang berjalan sendiri ketika suatu tindakan atau aksi tertentu terjadi di browser -->
+
+    <!-- contoh -->
+    <input id="pencetdakkau" type="button" value="Pencet Woi!">
+
+    <script>
+
+        const tombol = document.getElementById("pencetdakkau"); // panggil element nya menggunakan id terlebih dahulu
+        tombol.addEventListener("click", function (){
+            tombol.setAttribute("value", "sudah di pencet");
+        }); 
+        // pertama gunakan addEventLister ke element yang di panggil tadi. setelah itu isi parameter yang pertama nya menggunakan aksi atau tindakan apa yangdialkukan sesuai ketentuan event handler contoh nya ini "click" dan parameter kedua isi function kosong yang berisi pertintah untuk mengset atrribute atau menganti value dari element yang di panggil tadi
+    </script>
+</body>
+</html>
