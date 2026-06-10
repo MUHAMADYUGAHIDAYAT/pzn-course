@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Node</title>
+</head>
+<body>
+    <!-- text node itu adalah text yang di buat tanpa tag jadi bukan merupakan element. dia termasuk kedalam node -->
+    <!-- contoh -->
+    Muhamad Yuga Hidayat 
+
+    <!-- namun cara pembuatan text ini tidak di rekomendasikan karena sangat ribet untuk menggambilnya kedalam script -->
+
+    <script>
+        // cara menggambil text node
+        const text = document.body.firstChild.nextSibling.nextSibling.nextSibling.nextSibling; // disini menggunakan documment.body karena dia dibuat langsung di dalam body tanpa element dan juga .firstChild patokan tag comment pertama setelah itu 4x nextSibling agar sampai ke child nodes yang kita buat. 
+
+        //karena sebab ini tadi saya jelaskan bahawa pembuatan text tanpa tag itu tidak di rekomendasikan karena menggambil nya kedalam script cukup ribet bisa di lihat. kita harus mencari letak child node nya terlebih dahulu untuk bisa memanggil text nya dan apabila arsitektur code nya besar mungkin ini bakalan memakan waktu sangant lama untuk menemukan posisi text nya di dalam node saja.
+        console.info(text)
+        
+    </script>
+</body>
+</html>
