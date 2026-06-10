@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Node Create</title>
+</head>
+<body>
+<script>
+    //sebenarnya text node ini tidak harus di buat tetapi ini sebagai pelajaran saja
+    //cara pembuatan text node
+
+    const text = document.createTextNode("Muhamad Yuga Hidayat") // buat dlu text node nya menggunaakan .createTextNode di dalam document
+
+    document.body.appendChild(text); // setelah itu di dalam document.body tambahkan child node nya menggunakan append child
+    console.info(text) 
+
+    const cek = document.body.childNodes; // bisa kita lihat text node yang kita buat itu posisi nya di bawah script
+    console.info(cek)
+</script>
+</body>
+</html>
