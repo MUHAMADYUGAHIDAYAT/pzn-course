@@ -19,13 +19,13 @@
         }); 
         // pertama gunakan addEventLister ke element yang di panggil tadi. setelah itu isi parameter yang pertama nya menggunakan aksi atau tindakan apa yangdialkukan sesuai ketentuan event handler contoh nya ini "click" dan parameter kedua isi function kosong yang berisi pertintah untuk mengset atrribute atau menganti value dari element yang di panggil tadi
 
-        // karena ini bukan global event handler jadi ini bisa di lakukan berulang kali contoh
+        // karena ini bukan global event handler jadi ini bisa di lakukan lebih dari 1 event contoh
 
         // kita buat event listener lagi dan munculkan di console
         tombol.addEventListener("click", function(){
             console.log("terklik!!");
         });
-        // bisa di lihat di console terkliknya terus bertambah apabila tombol nya di klik terus
+        // bisa di lihat di console terkliknya dan set attributnya tetap berjalan tidak tertimpa
     </script>
 </body>
 </html>

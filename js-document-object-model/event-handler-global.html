@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Global</title>
+</head>
+<body>
+    <!-- ini sebenarnya termasuk cara lama untuk event handler karena function itu langsung menempel kedalam properti html  -->
+    <!-- ciri khasnya itu biasanya di awal kata menggunakan on seperti onclick, onload, dll -->
+    <!-- global event handler ini hanya bisa menjalankan 1 function saja kalo ada function lain setelah nya maka function sebelum nya akan tertimpa -->
+    <input type="button" value="apaya" id="pencet">
+
+    <script>
+
+        const pencet = document.getElementById("pencet");
+        // kita gunakan onclick sebagai contoh
+        pencet.onclick = function (){
+            pencet.setAttribute("value", "Hoek")
+        }
+        pencet.onclick = function (){
+            console.log("woiii")
+        }
+        // bisa di lihat function pertama yang setAttribute itu valuenya tertimpa dengan console
+
+    </script>
+</body>
+</html>
