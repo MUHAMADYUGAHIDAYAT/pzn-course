@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <!-- event itu adalah sebuah tindakan yang berjalan ketika kita melakukan aksi tertentu misalnya button di klik maka akan muncul alert atau mencari posisi dari x dan y di canvas contoh -->
+    
+
+    <h1 id="text">Pencet box Merah </h1>
+    <div id="canvas" style="width: 500px; height: 500px; background-color:brown"></div>
+
+    <script>
+        // ambil id element h1 dan div
+        const canvas = document.getElementById("canvas");
+        const text = document.getElementById("text");
+
+        //gunakan addEventListener mouseover untuk mengecek posisi mouse ketika berada di dalam canvas
+        //oh iya saya tadi di function nya tadi ingin menggunakan x dan y biasa. tapi setalah saya minta gemini untuk cek code nya dia bilang x dan y kurang akurat untuk mencari posisi dan dia menyarankan menggunakan offsetX dan offsetY, jadi saya menggantinya
+        canvas.addEventListener("mousemove", function(event){
+            text.textContent = `Kamu mencet di (${event.offsetX}, ${event.offsetY})`;
+        });
+
+        //tampah kan juga sedikit addevent listener mouseleave untuk mendetek pada saat mouse keluar kanvas
+        canvas.addEventListener("mouseleave", function(event){
+            text.textContent = `Kamu keluar kanvas`;
+        });
+
+
+
+        
+        
+    </script>
+</body>
+</html>
