@@ -19,7 +19,7 @@
         //gunakan addEventListener mouseover untuk mengecek posisi mouse ketika berada di dalam canvas
         //oh iya saya tadi di function nya tadi ingin menggunakan x dan y biasa. tapi setalah saya minta gemini untuk cek code nya dia bilang x dan y kurang akurat untuk mencari posisi dan dia menyarankan menggunakan offsetX dan offsetY, jadi saya menggantinya
         canvas.addEventListener("mousemove", function(event){
-            text.textContent = `Kamu mencet di (${event.offsetX}, ${event.offsetY})`;
+            text.textContent = `Kamu berada di (${event.offsetX}, ${event.offsetY})`;
         });
 
         //tampah kan juga sedikit addevent listener mouseleave untuk mendetek pada saat mouse keluar kanvas
