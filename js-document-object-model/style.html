@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style</title>
+</head>
+<body>
+    <!-- di dalam js style jg bisa di manipulasi tapi pada format css nya yang awal nya itu menggunakan lowercase dan - contoh background-color itu di ubah menjadi format pascalCase mejadi seperti ini backgroundColor -->
+
+    <!-- contoh disini kita akan buat canvas yang warna nya bisa di ubah dengan button -->
+    <input type="button" value="blue">
+    <input type="button" value="red">
+    <input type="button" value="yellow">
+
+    <div id="canvas" style="width: 500px; height: 500px; background-color:bisque"></div>
+
+    <script>
+        // seperti biasa kita ambil element id nya dlu
+        const canvas = document.getElementById("canvas");
+        const buttons = document.querySelectorAll("input"); //disini kita gunakan querySelectorAll untuk mengambil semua button nya
+
+        // gunakan for of terlebih dalahulu karena querySelectorAll itu sebuah nodlist bukan element tunggal 
+        for (const button of buttons){
+            button.addEventListener("click",function(){
+                canvas.style.backgroundColor = button.getAttribute("value");
+            })
+        }
+    </script>
+
+</body>
+</html>
