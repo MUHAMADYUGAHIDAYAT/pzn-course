@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Text</title>
+</head>
+<body>
+    <!-- inner text itu merupakan property untuk mendapatkan isi text sebuah element -->
+    <!-- tapi ada perbedaan antara textContent dan inner text -->
+    <!-- contoh -->
+    <p id="content">
+        <script>
+            console.info("Hello World");
+        </script>
+        <b>Eko</b> Kurnaiwan <i>Khannedy</i>
+    </p>
+
+    <script>
+        const content = document.getElementById("content");
+        console.info(content.textContent); // bisa dilihat ini kalau menggunakan text content apabila di dalam text itu ada script maka dia ikut terbaca 
+        console.info(content.innerText); // sedangkan di innertext hanya membaca bagian text saja tanpa script
+    </script>
+</body>
+</html>
