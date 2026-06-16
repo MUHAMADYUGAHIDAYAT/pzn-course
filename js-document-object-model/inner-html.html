@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Html</title>
+</head>
+<body>
+        <!-- ini juga merupakan properti yang berfungsi untuk membaca atau mengubah konten html di dalam sebuah element  -->
+        <!-- contoh -->
+    <div id="content"></div>
+    <div id="content2"></div>
+    <div id="content3"></div>
+
+    <script>
+        // kalau kita ingin mengcreate text dan tag di dalam element kita bisa menggunakan innerHTML
+        const content = document.getElementById("content");
+        const content2 = document.getElementById("content2");
+        const content3 = document.getElementById("content3");
+        content.textContent = "<h1>Belajar Javascript</h1><p>Yoooo wassaaaap</p>"; //ketika kita mengunakan textContent tag yang di buat tidak terbaca malah ikut menjadi string
+        content2.innerText = "<h1>Belajar Javascript</h1><p>Yoooo wassaaaap</p>"; //begitu juga menggukan innerText
+        content3.innerHTML = "<h1>Belajar Javascript</h1><p>Yoooo wassaaaap</p>"; // tapi ketika menggukan innerHTML Tag nya juga ikut terbaca sebagai element
+
+        //namuh penggunaan innerHTML untuk website ini tidaklah di rekomendasikan karena resiko keamaan. hacker bisa saja melakukan melakukan serangan XSS terhadap website melewati innerHTML jadi ini tidak di rekomendasikan
+    </script>
+</body>
+</html>
