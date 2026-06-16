@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <!-- window itu bukan bagian dari node. window itu ekslusif dari browser -->
+    <!-- semisal disini kita ingin mengecek tinggi dan lebar dari monitor kita menggunakan windows dan lokasi url -->
+
+    <p id="content"></p>
+    <p id="lokasi"></p>
+
+    <script>
+
+        const content = document.getElementById("content");
+        const lokasi = document.getElementById("lokasi");
+        const tinggi = window.screen.height; // kita pakek window.screem height untuk mengecek tingi
+        const lebar = window.screen.width; // dan window.screen.width untuk mengecek lebar
+        const url = window.location; // menggunakan .location untuk tau lokasi url nya
+
+        content.textContent = `Window Lebar(${lebar}) X Tinggi(${tinggi})`;
+        lokasi.textContent = url;
+        
+        //sebenarnya masih ada sangat banyak syntax syntax untuk window tapi kalian bisa lihat dan coba sendiri dokumentasi nya di internet
+    </script>
+</body>
+</html>
