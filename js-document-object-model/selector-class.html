@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Class</title>
+    <!-- ini contoh penggunaan Selector Class di Script  -->
+</head>
+<body>
+
+    <ul>
+        <li class="menuItem">Pertama</li>
+        <li>Kedua</li>
+        <li class="menuItem">Ketiga</li>
+    </ul>
+
+    <script>
+
+        const menuItem = document.querySelectorAll(".menuItem");
+        // menggunakan  querySelectorAll lagi tapi harus ada . untuk menandakan bahwa itu class
+        console.log(menuItem);
+        // bisa di lihat di console nodelist nya 2 karena yang memiliki class menuItem itu hanya li yang berisi Pertama dan ketiga
+
+        const menuitemli = document.querySelectorAll ("li.menuItem");
+        // atau bisa value querySelectorAll nya di buat lebih spesifik seperti ini li.menuItem
+        console.log(menuitemli);
+        // hasilnya masih tetap sama tapi pemilihan nya bakalan lebih spesifik
+    </script>
+</body>
+</html>
