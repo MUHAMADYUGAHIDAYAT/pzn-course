@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Id</title>
+    <!-- sekarang selector untuk id -->
+</head>
+<body>
+    <ul>
+        <li class="menuItem">Pertama</li>
+        <li id="menu2">Kedua</li>
+        <li class="menuItem">Ketiga</li>
+    </ul>
+
+    <script>
+
+        const menu2 = document.querySelectorAll("#menu2");
+        // masih menggunakan querySelectorAll tapi karena id harus ada tanda # nya sebelum namanya agar querynnya bisa membaca bahwa itu id 
+        console.log(menu2);
+        // bisa di lihat di console dia menampilkan nodelist yang memiliki id menu2 (kenapa saya hanya gunakan 1 id contoh karena id itu harus cuma satu tidak bisa di duplikat agar tidak bentrok)
+
+    </script>
+</body>
+</html>
