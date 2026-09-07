@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Type</title>
+    <!-- ini juga selector untuk men seleksi type tertentu saja -->
+</head>
+<body>
+    <!-- contoh -->
+    <ul>
+        <li>satu</li>
+        <li>dua</li>
+        <li>tiga</li>
+        <li>empat</li>
+        <li>lima</li>
+    </ul>
+    <ul>
+        <li>satu 2</li>
+        <li>dua 2</li>
+        <li>tiga 2</li>
+        <li>empat 2</li>
+        <li>lima 2</li>
+    </ul>
+
+    <script>
+
+        const elements = document.querySelectorAll("li");
+        // menggunakan querySelectorAll tapi value nya hanya untuk li saja jadi dia akan mengambil semua element li yang ada di html walaupun dia berada di ul yang berbeda
+        console.log(elements);
+        // bisa di lihat di console dia men select semua element li walaupun ul nya berbeda
+    </script>
+</body>
+</html>
