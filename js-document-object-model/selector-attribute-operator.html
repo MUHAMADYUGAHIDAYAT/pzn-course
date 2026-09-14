@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Attribute Operator</title>
+    <!-- selector attribute operator itu di gunakan untuk mencari value dalam attribute -->
+</head>
+<body>
+    <!-- contoh nya disini kita akan membuat 6 class dengan value berbeda tetapi ada satu kata di dalam value itu yang sama yaitu yuga  -->
+    <div class="muhamad yuga hidayat"></div>
+    <div class="yuga-b-ajah"></div>
+    <div class="yssyuga"></div>
+    <div class="yuga exp"></div>
+    <div class="kerenyugakamu"></div>
+    <div class="mid-bae-yuga"></div>
+
+    <script>
+
+        const awalan = document.querySelectorAll("div[class^='yuga']");
+        //untuk mencari hanya awalan value yuga kita di sini masih menggunakan querySelectorAll tapi di dalam parameter nya harus di spesifikasi dengan ^ untuk mencari awalanya contoh div[class^='value'] 
+        console.log(awalan);
+        //bisa dilihat di console nodelist yang di dapat ada 2 dengan value yuga-b-aja dan yuga.exp(walaupun dia multiple classes tetapi kalau di awal nya ada yuga dia tetap di panggil)
+
+        const akhiran = document.querySelectorAll("div[class$='yuga']");
+        //sedangkan kalo ingin mencari akhiran yang di perlukan yaitu $ contoh div[class$='value']
+        console.log(akhiran);
+        //bisa di lihat nodelsit nya 2 yaitu yssyuga dan mid-bae-yuga. yang di mana mau bagaimanapun valuenya asalkan ada kata yuga diakhiran dia bisa di panggil
+
+        const semua = document.querySelectorAll("div[class*='yuga']");
+        // sedangkan kalo ingin mencari semua attribute yang bervalue yuga yang di perlukan hanya * contoh div[class*='value'] 
+        console.log(semua);
+        // bisa di lihat semua attribute yang bervalue yuga entah di tengah di awak dan di akhir di panggil
+
+        //sebenarnya masih banyak contoh penggunaan operator pada selector attribute tapi di sini saya hanya mencotohkan 3 saja untuk lebih nya bisa kalian cari sendiri di developer.mozilla.org
+
+
+    </script>
+</body>
+</html>
