@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <!-- attribute selector itu dapat memilih semua attribut yang sama dalam semua tag di yang di buat seperti contoh di bawah -->
+</head>
+<body>
+    <!-- disini kita menggunakan tag yang berbeda tetapi attribut nya sama semua yaitu class= -->
+    <div class="muhamad"></div>
+    <p class="yuga"></p>
+    <h1 class="hidayat"></h1>
+
+    <script>
+
+        const list = document.querySelectorAll("[class]");
+        // disini menggunakan querySelectorAll tetapi isi parameternya harus ada [] agar spesifikasi querrynya berfokus pada attribut
+        console.info(list);
+        // bisa di lihat di console. nodelist yang di panggil semuanya berisi attribute class tapi mereka memiliki tag yang berbeda
+
+    </script>
+</body>
+</html>
