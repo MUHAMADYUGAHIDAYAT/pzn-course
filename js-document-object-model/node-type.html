@@ -14,7 +14,7 @@
         const nodes = document.body.childNodes;
         // disini menggunakan body karena ingin melihat seluruh isi body dan childnodes untuk melihat semua turunan nodelist
         for (let node of nodes){
-            //disini juga menggukan for o atau bisa juga for each untuk memanggil semua nodelist nya 
+            //disini juga menggukan for of atau bisa juga for each untuk memanggil semua nodelist nya 
             console.log(`${node} : ${node.nodeType}`);
             // bisa di lihat di konsole semua value nodelist nya terlihat. kenapa yang pertama itu bukannya komen? melainkan text value nya? karenaa setelah tag body ada enter yang terhitung dalam value text jadi value pertama nya text
         };
