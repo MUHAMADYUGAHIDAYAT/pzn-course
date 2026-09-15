@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Type</title>
+    <!-- node type itu adalah type yang ada di dalam node yang memiliki value nya masing masing -->
+</head>
+<body>
+    <!-- contoh disini saya menggunakan 3 element untuk melihat masing masing value node nya menggunakan node type -->
+    Muhamad Yuga hidayat
+    <h1>Ya begitu</h1>
+    <script>
+
+        const nodes = document.body.childNodes;
+        // disini menggunakan body karena ingin melihat seluruh isi body dan childnodes untuk melihat semua turunan nodelist
+        for (let node of nodes){
+            //disini juga menggukan for o atau bisa juga for each untuk memanggil semua nodelist nya 
+            console.log(`${node} : ${node.nodeType}`);
+            // bisa di lihat di konsole semua value nodelist nya terlihat. kenapa yang pertama itu bukannya komen? melainkan text value nya? karenaa setelah tag body ada enter yang terhitung dalam value text jadi value pertama nya text
+        };
+    </script>
+</body>
+</html>
