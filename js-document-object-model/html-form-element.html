@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Form Element</title>
+    <!-- html form elemet itu adalah sebauh kontainer untuk menggumpulkan data seperrti form pendaftaran, pencarian. bahkan login sebelum datanya di proses ke serveer ataupun js-->
+
+</head>
+<body>
+    <!-- disini saya akan mencontohkan penggunaan html form element untuk comment -->
+
+    <form name="commentForm">
+        <label for="comment">
+            Comment : <input type="text" name="comment" id="comment">
+        </label>
+        <br>
+        <label for="from">
+            From : <input type="text" name="from" id="from">
+        </label>
+        <br>
+        <input type="submit" value="Kirim">
+    </form>
+    <div id="commentlist"></div>
+
+    <script>
+        // disini saya tidak bungkus dengan const karena langsung ingin menggunakan event handler onsubmit
+        //dan juga untuk paramater dari querry selectornya itu "form[name=value]"
+        document.querySelector("form[name=commentForm]").onsubmit = function (event) {
+            // dan juga jangan lupa untuk prevent default karena kalau tidak dia ketika di kirim dia akan langsung otomatis submit 
+            event.preventDefault();
+
+            // ambil id div commentList
+            const commentList = document.getElementById("commentlist");
+            //pakai .value untuk comment dan from karena kita ingin melihat valuenya
+            const comment = document.getElementById("comment").value;
+            const from = document.getElementById("from").value;
+            
+            //buat element baru p untuk muncul di comment list
+            const commentItem = document.createElement("p");
+            //gunakan string interpolation saya agar bisa langsun menggabubngkan variable tanpa arus menggunakan +
+            commentItem.textContent = `${comment} - ${from}`;
+            //seterusnya appendChild untuk memasukan nya kedalam comment list
+            commentList.appendChild(commentItem);
+
+            // dan terahir gumanakn .forms['name'].reset(); untuk mereset isi form nya setelah di submit (ini juga termasuk salah satu keunggulan nya karena bisa langsung di akses via name)
+            document.forms['commentForm'].reset();
+        }
+    </script>
+</body>
+</html>
