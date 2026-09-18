@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Form Element Via name</title>
+    <!-- disini sama seperti sebelum nya tapi kita akan mengakses attribute dari form menggunakan name nya langsung -->
+</head>
+<body>
+    <!-- ini masih sama seperti sebelumnya -->
+    <form name="commentForm">
+        <label for="comment">
+            Comment : <input type="text" name="comment" id="comment">
+        </label>
+        <br>
+        <label for="from">
+            From : <input type="text" name="from" id="from">
+        </label>
+        <br>
+        <input type="submit" value="Kirim">
+    </form>
+
+    <div id="commentList"></div>
+
+    <script>
+        // nah di bagian script ini kita gunakan document.forms['name'] untuk langsung mengakses form nya 
+        document.forms['commentForm'].onsubmit = function (event){
+            event.preventDefault();
+            // untuk commentList itu masih sama karena dia tidak berada dalam node nya sih form
+            const commentList = document.getElementById("commentList");
+            // nah untuk commnet dan from itu juga bisa langsung karena dia masih satu child dengan commentform dengan cara document.form['nama']['namaChildNode nya']
+            const comment = document.forms['commentForm']['comment'].value;
+            const from = document.forms['commentForm']['from'].value;
+
+            // dan untuk sisa nya masih sama seperti penjelasan sebelum nya
+            const commentItem = document.createElement("p");
+            commentItem.textContent = `${comment} - ${from}`;
+            commentList.appendChild(commentItem);
+            document.forms['commentForm'].reset();
+
+
+        }
+        // nah bisa dilihat semua nya berkerja sama seperti sebelum nya
+    </script>
+</body>
+</html>
