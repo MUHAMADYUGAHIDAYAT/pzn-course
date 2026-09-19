@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Table Element</title>
+    <!-- sekarang ke html table element itu sama seperti table table pada umum nya kita bisa membuat nama di baris atau kolom nya menggunakan thead,tbody,tfoot, tr, dan juga th. -->
+</head>
+<body>
+    <!-- contoh nya ini table untuk pendapatan dari pesanan -->
+    <table id="orderRevenue" border="1">
+        <!-- caption untuk judul singkat atau keterangan dari table(opsional) -->
+        <caption>Order Revenue</caption>
+
+        <!-- thead untuk kepala dari table nya -->
+        <thead>
+            <!-- tr itu untuk membuat row atau baris baru dalam table -->
+            <tr>
+                <!-- th untuk table head nya -->
+                <th>Month</th>
+                <th>Income</th>
+            </tr>
+        </thead>
+
+        <!-- tbody untuk badan -->
+        <tbody>
+            <tr>
+                <!-- td itu table data atau biasa digunakan untuk mengisi sel -->
+                <td>January</td>
+                <!-- ini disini dengan nilai contoh saja  -->
+                <td class="incomeValue 1">10.000.000</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td class="incomeValue 2">12.000.000</td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <td class="incomeValue 3">16.000.000</td>
+            </tr>
+        </tbody>
+
+        <!-- dan tfoot ini untuk footer -->
+        <tfoot>
+            <tr>
+                <td>Total :</td>
+                <!-- karena disini saya akan mencontohkan pembuatan total otomatis dari semua income di table nya jadi untul value sel nya kita kosongkan saja -->
+                <td id="tableTotal"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+
+        // disni ambil semmua class dengan nama incomeValue menggunakan querySelectorAll
+        const incomeValue = document.querySelectorAll(".incomeValue");
+        // ambil juga id untul total
+        const tTotal = document.getElementById("tableTotal");
+        //buat juga variable baru menggunakn let dan kosongkan nilainya dengan number = 0
+        let totalIncome = 0;
+
+        // disini gunakan forEach untuk mengambil mengambil semua value class nya satu per satu
+        incomeValue.forEach(function(e){
+            // gunkan number() untuk mengubah value menjadi number dan parameter.innerText.replace(target, hasil)untuk mengubah value nya dan regex /\./ untuk mendeteksi . dan jangan lupa gnya untuk global agar semua . nya di ubah ke "" atau kosong
+            const bersih = Number(e.innerText.replace(/\./g, ""));
+            // setelah diubah tambahkan semua value nya menjadi satu dengan variable += variable yang di gunakan untuk number() tadi
+            totalIncome += bersih;
+            //disini tidak perlu di return nilai nya karena kita menggunakan fungsi forEach
+        })
+
+        //ambil id total dan masukan value totalIncome ke innerTextnya
+        //dan juga tambahkan .toLocaleString('id-ID') agar value nya memiliki . lagi
+        tTotal.innerText = totalIncome.toLocaleString('id-ID');
+
+        // atau disini juga kita bisa mengakses element table nya langsung
+        const table = document.getElementById("orderRevenue");
+        console.info(table.caption)
+        console.info(table.tHead)
+        console.info(table.tBodies)
+        console.info(table.tFoot)
+        console.info(table.rows)
+
+        // bisa dilihat di console semua element yang kita log langsung muncul
+    </script>
+</body>
+</html>
